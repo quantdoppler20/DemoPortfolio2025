@@ -617,7 +617,7 @@ const HeroSection = ({ userData }) => {
                     </button>
 
                     <button className="flex items-center space-x-2 px-4 py-3 bg-black/50 hover:bg-black/70 border border-gray-500/30 hover:border-gray-400 rounded-lg transition-all duration-300">
-                      <a download href="/assets/EhianeOigiagbeCV.pdf" className="text-gray-300 font-mono text-sm">DOWNLOAD_CV</a>
+                      <a download href="/assets/EhianeOigiagbe - All_Inclusive - CV" className="text-gray-300 font-mono text-sm">DOWNLOAD_CV</a>
                       <span className="text-gray-400">↓</span>
                     </button>
                   </div>
