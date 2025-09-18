@@ -1,10 +1,9 @@
 // User data extracted from resume and portfolio requirements
 export const userData = {
   personal: {
-    name: "Ehiane Oigiagbe",
-    title: "Full-Stack Engineer",
+    name: "QuantDoppler",
     subtitle: "AI Explorer. Systems Thinker.",
-    description: "Innovative software engineer with expertise in full-stack development, AI integration, and systems architecture. Passionate about building scalable solutions that bridge technology and human experience.",
+    description: "IInnovativesoftware engineer with expertise in full-stack development, AI integration, and systems architecture. Passionate about building scalable solutions that bridge technology and human experience.",
     location: "Available Worldwide",
     email: "ehiane@example.com", // Update with actual email
     github: "https://github.com/ehiane", // Update with actual GitHub
@@ -84,8 +83,8 @@ export const userData = {
         testing: "NUnit",
         architecture: "Modular"
       },
-      github: "https://github.com/Ehiane/FundraiserApplication_WinForms",
-      stillImage: "/assets/bentoGrids/Fundraiser/Fundraiser_still.png",
+      github: "https://github.com/serApplication_WinForms",
+      stillImage: "/assets/bentoGrids/FFundraiserFundraiser_still.png",
       hoverVideo: "/assets/bentoGrids/Fundraiser/Fundraiser_hover.mp4",
       gridSize: "small"
     },
