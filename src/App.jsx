@@ -4,6 +4,7 @@ import IntroVideo from './components/IntroVideo/IntroVideo'
 import NameReveal from './components/NameReveal/NameReveal'
 import BootingScreen from './components/BootingScreen/BootingScreen'
 import HeroSection from './components/HeroSection/HeroSection'
+import Navbar from './components/Navbar/Navbar'
 import BentoGrid from './components/ProjectSection/BentoGrid'
 import TechnicalArsenal from './components/TechnicalArsenal/TechnicalArsenal'
 import GalacticRoadmap from './components/GalacticRoadmap/GalacticRoadmap'
@@ -85,7 +86,9 @@ function App() {
           >
             {/* Starfield Background */}
             <div className="starfield" />
-            
+
+            <Navbar />
+
             {/* Main Content */}
             <HeroSection userData={userData} />
             <TechnicalArsenal userData={userData} />
