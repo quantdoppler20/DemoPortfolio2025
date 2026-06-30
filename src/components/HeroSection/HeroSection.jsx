@@ -26,7 +26,7 @@ const HeroSection = ({ userData }) => {
   useEffect(() => {
     const startupSequence = [
       "$ whoami",
-      userData?.personal?.name || "Ehiane Oigiagbe"
+      userData?.personal?.name || "QuantDoppler"
     ]
 
     let index = 0
@@ -50,7 +50,7 @@ const HeroSection = ({ userData }) => {
       '/help': [
         'Available commands:',
         '  /help     - Show this help menu',
-        '  /about    - Learn more about Ehiane',
+        '  /about    - Learn more about QuantDoppler',
         '  /skills   - View technical skills',
         '  /projects - Show recent projects',
         '  /roadmap  - View galactic journey',
@@ -61,11 +61,11 @@ const HeroSection = ({ userData }) => {
         '  /status   - System status'
       ],
       '/about': [
-        'Ehiane Oigiagbe - Full-Stack Engineer',
-        'AI Explorer & Systems Thinker',
+        'QuantDoppler — Full-Stack Engineer & Systems Architect',
+        'AI Integrator. Deep-Tech Builder.',
         '',
-        'Building innovative solutions that bridge',
-        'technology and human experience.',
+        'Engineering sovereign-grade solutions that bridge',
+        'technology and real-world human systems.',
         '',
         'Fun fact: I speak to computers better than humans 🤖'
       ],
@@ -137,7 +137,7 @@ const HeroSection = ({ userData }) => {
 
     const funnyResponses = [
       "I'm not going to lie, I didn't see this question coming 😂, ask another one",
-      "See, I'm not an AI, Ehiane just built me for decoration... if you want smarter answers, pay for my OpenAI API key 💸",
+      "See, I'm not an AI, QuantDoppler just built me for decoration... if you want smarter answers, pay for my OpenAI API key 💸",
       "Error 404: Sense of humor not found. Try /joke instead 🤖",
       "I'm just a humble terminal, not a search engine. Try /help for things I actually know 🤷‍♂️",
       "That's not in my programming manual! Type /help for commands that won't break me 🔧",
@@ -179,7 +179,7 @@ const HeroSection = ({ userData }) => {
     if (response[0] === 'clear') {
       setTerminalLines([
         "$ whoami", 
-        userData?.personal?.name || "Ehiane Oigiagbe"
+        userData?.personal?.name || "QuantDoppler"
       ])
     } else {
       // Add a separator line before the response (except for empty responses)
@@ -330,7 +330,7 @@ const HeroSection = ({ userData }) => {
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   <span className="ml-4 text-green-400 font-mono text-sm">
-                    zsh - ehiane@cosmic-os: ~
+                    zsh - quantdoppler@cosmic-os: ~
                   </span>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -515,7 +515,7 @@ const HeroSection = ({ userData }) => {
                   <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-cyan-400 shadow-lg shadow-cyan-400/30">
                     <img
                       src="/assets/astronaut-portrait.jpg"
-                      alt="Ehiane Oigiagbe - Space Explorer"
+                      alt="QuantDoppler - Space Explorer"
                       className="w-full h-full object-cover"
                       onError={(e) => {
                         // Fallback to a gradient background if image fails to load
@@ -533,7 +533,7 @@ const HeroSection = ({ userData }) => {
                 <h1 className="text-4xl md:text-5xl font-bold mb-2 text-center">
                   <span className="text-white">Hi, I'm </span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400">
-                    {userData?.personal?.name?.split(' ')[0] || 'Ehiane'}
+                    {userData?.personal?.name?.split(' ')[0] || 'QuantDoppler'}
                   </span>
                 </h1>
                 

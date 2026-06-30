@@ -66,7 +66,7 @@ const NameReveal = ({ onComplete }) => {
               ease: "linear"
             }}
           >
-            EHIANE
+            QUANTDOPPLER
           </motion.h1>
 
           {/* Subtitle */}
@@ -76,7 +76,7 @@ const NameReveal = ({ onComplete }) => {
             transition={{ duration: 0.8, delay: 1.5 }}
             className="text-lg md:text-xl text-cosmic-glow/80 font-mono tracking-widest"
           >
-            INITIALIZING COSMIC INTERFACE
+            INITIALIZING SOVEREIGN SYSTEMS
           </motion.div>
 
           {/* Loading dots */}

@@ -2,8 +2,8 @@
 export const userData = {
   personal: {
     name: "QuantDoppler",
-    subtitle: "Full-Stack Engineer. AI Integrator. Systems Architect.",
-    description: "Software engineer specializing in full-stack development, AI integration, and scalable systems architecture. I build solutions that are robust under pressure, elegant in design, and meaningful in impact — bridging the gap between cutting-edge technology and real human experience.",
+    subtitle: "Sovereign Systems Engineer. AI Integrator. Deep-Tech Builder.",
+    description: "A deep-tech engineering force forging enterprise-grade software for systems that cannot fail. From first commit to live deployment — full-stack ownership, zero handoffs, and solutions built to scale under real-world pressure.",
     location: "Available Worldwide",
     email: "ehiane@example.com", // Update with actual email
     github: "https://github.com/ehiane", // Update with actual GitHub
@@ -11,11 +11,11 @@ export const userData = {
   },
   
   terminalSequence: [
-    "> initializing systems...",
+    "> initializing sovereign systems...",
     "> loading mission parameters...", 
-    "> compiling experience modules...",
-    "> synchronizing timeline...",
-    "> all systems nominal. welcome, explorer_"
+    "> compiling engineering modules...",
+    "> synchronizing deployment timeline...",
+    "> all systems nominal. welcome, commander_"
   ],
   
   projects: [
