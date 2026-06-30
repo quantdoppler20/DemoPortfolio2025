@@ -1,0 +1,2014 @@
+
+Action: {"type": "mcp_tool", "tool_name": "mcp_view_bulk", "tool_arguments": {"paths": ["/app/src/components/ContactSection/ContactSection.jsx", "/app/src/components/TechnicalArsenal/TechnicalArsenal.jsx", "/app/src/components/GalacticRoadmap/GalacticRoadmap.jsx", "/app/src/components/ProjectSection/BentoGrid.jsx", "/app/src/components/ProfessionalInvolvements/ProfessionalInvolvements.jsx"]}}
+Observation: ===FILE: /app/src/components/ContactSection/ContactSection.jsx
+/app/src/components/ContactSection/ContactSection.jsx:
+1|import { motion } from 'framer-motion'
+2|
+3|const ContactSection = () => {
+4|  return (
+5|    <section id="contact" className="relative min-h-screen py-20 overflow-hidden bg-black flex items-center justify-center">
+6|      {/* Background Elements */}
+7|      <div className="absolute inset-0">
+8|        {/* Discourse Background Video */}
+9|        <div className="absolute inset-0 overflow-hidden">
+10|          <motion.video
+11|            autoPlay
+12|            loop
+13|            muted
+14|            playsInline
+15|            className="absolute inset-0 w-full h-full object-cover opacity-25"
+16|            style={{ filter: 'hue-rotate(240deg) brightness(0.6) contrast(1.2)' }}
+17|            initial={{ scale: 1.05 }}
+18|            animate={{ 
+19|              scale: [1.05, 1.02, 1.05],
+20|              opacity: [0.2, 0.3, 0.2]
+21|            }}
+22|            transition={{ 
+23|              duration: 10,
+24|              repeat: Infinity,
+25|              ease: "easeInOut"
+26|            }}
+27|          >
+28|            <source src="/assets/discourse.mp4" type="video/mp4" />
+29|          </motion.video>
+30|          
+31|          {/* Video overlay for better text readability */}
+32|          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+33|          <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/20 via-transparent to-blue-900/20" />
+34|        </div>
+35|
+36|        {/* Animated starfield */}
+37|        <div className="absolute inset-0">
+38|          {[...Array(150)].map((_, i) => (
+39|            <motion.div
+40|              key={i}
+41|              className="absolute w-px h-px bg-white rounded-full"
+42|              style={{
+43|                left: `${Math.random() * 100}%`,
+44|                top: `${Math.random() * 100}%`,
+45|              }}
+46|              animate={{
+47|                opacity: [0.2, 1, 0.2],
+48|                scale: [1, 1.8, 1],
+49|              }}
+50|              transition={{
+51|                duration: 4 + Math.random() * 3,
+52|                repeat: Infinity,
+53|                delay: Math.random() * 3,
+54|              }}
+55|            />
+56|          ))}
+57|        </div>
+58|
+59|        {/* Cosmic background effects */}
+60|        <div className="absolute inset-0 opacity-20">
+61|          <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" />
+62|          <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-violet-500/20 rounded-full blur-3xl animate-pulse" />
+63|        </div>
+64|
+65|        {/* Grid overlay */}
+66|        <div className="absolute inset-0 opacity-5">
+67|          <div 
+68|            className="w-full h-full"
+69|            style={{
+70|              backgroundImage: `
+71|                linear-gradient(rgba(64, 255, 218, 0.1) 1px, transparent 1px),
+72|                linear-gradient(90deg, rgba(64, 255, 218, 0.1) 1px, transparent 1px)
+73|              `,
+74|              backgroundSize: '60px 60px'
+75|            }}
+76|          />
+77|        </div>
+78|      </div>
+79|
+80|      {/* Main Content */}
+81|      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+82|        {/* Header Badge */}
+83|        <motion.div
+84|          initial={{ opacity: 0, scale: 0 }}
+85|          whileInView={{ opacity: 1, scale: 1 }}
+86|          transition={{ duration: 0.8 }}
+87|          viewport={{ once: true }}
+88|          className="inline-block mb-8"
+89|        >
+90|          <div className="bg-gradient-to-r from-cyan-400/10 to-blue-400/10 border border-cyan-400/30 rounded-full px-6 py-2">
+91|            <span className="text-cyan-400 font-mono text-sm">CONTACT.PROTOCOL</span>
+92|          </div>
+93|        </motion.div>
+94|
+95|        {/* Main Title */}
+96|        <motion.h2
+97|          initial={{ opacity: 0, y: 30 }}
+98|          whileInView={{ opacity: 1, y: 0 }}
+99|          transition={{ duration: 1, delay: 0.2 }}
+100|          viewport={{ once: true }}
+101|          className="text-5xl md:text-7xl font-bold mb-8"
+102|        >
+103|          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+104|            Let&apos;s Connect
+105|          </span>
+106|        </motion.h2>
+107|
+108|        {/* Subtitle */}
+109|        <motion.p
+110|          initial={{ opacity: 0, y: 20 }}
+111|          whileInView={{ opacity: 1, y: 0 }}
+112|          transition={{ duration: 0.8, delay: 0.4 }}
+113|          viewport={{ once: true }}
+114|          className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed"
+115|        >
+116|          Ready to explore new opportunities and collaborate on innovative projects? 
+117|          Let&apos;s connect across the digital cosmos.
+118|        </motion.p>
+119|
+120|        {/* LinkedIn Connection Button */}
+121|        <motion.div
+122|          initial={{ opacity: 0, y: 30 }}
+123|          whileInView={{ opacity: 1, y: 0 }}
+124|          transition={{ duration: 0.8, delay: 0.6 }}
+125|          viewport={{ once: true }}
+126|          className="mb-16"
+127|        >
+128|          <motion.a
+129|            href="https://www.linkedin.com/in/ehiane-oigiagbe/"
+130|            target="_blank"
+131|            rel="noopener noreferrer"
+132|            className="group relative inline-flex items-center px-12 py-6 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-2 border-blue-400/30 rounded-2xl font-semibold text-lg text-blue-400 hover:text-white transition-all duration-500 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-400/20"
+133|            whileHover={{ 
+134|              scale: 1.05,
+135|              boxShadow: "0 0 40px rgba(59, 130, 246, 0.3)"
+136|            }}
+137|            whileTap={{ scale: 0.95 }}
+138|          >
+139|            {/* Background glow effect */}
+140|            <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+141|            
+142|            {/* LinkedIn Icon */}
+143|            <svg 
+144|              className="w-8 h-8 mr-4 relative z-10" 
+145|              fill="currentColor" 
+146|              viewBox="0 0 24 24"
+147|            >
+148|              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+149|            </svg>
+150|            
+151|            <span className="relative z-10 flex items-center">
+152|              Connect on LinkedIn
+153|              <svg 
+154|                className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform duration-300" 
+155|                fill="none" 
+156|                stroke="currentColor" 
+157|                viewBox="0 0 24 24"
+158|              >
+159|                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+160|              </svg>
+161|            </span>
+162|          </motion.a>
+163|        </motion.div>
+164|
+165|        {/* Status Terminal */}
+166|        <motion.div
+167|          initial={{ opacity: 0, y: 20 }}
+168|          whileInView={{ opacity: 1, y: 0 }}
+169|          transition={{ duration: 0.8, delay: 0.8 }}
+170|          viewport={{ once: true }}
+171|          className="max-w-2xl mx-auto"
+172|        >
+173|          <div className="bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6">
+174|            <div className="flex items-center justify-between mb-4">
+175|              <div className="flex items-center space-x-2">
+176|                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+177|                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+178|                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+179|              </div>
+180|              <span className="text-gray-400 text-xs font-mono">contact_terminal.exe</span>
+181|            </div>
+182|            
+183|            <div className="font-mono text-sm space-y-2">
+184|              <div className="flex items-center space-x-2">
+185|                <span className="text-green-400">$</span>
+186|                <span className="text-white">status --check-availability</span>
+187|              </div>
+188|              <div className="text-cyan-400">
+189|                ► SYSTEM_STATUS: OPERATIONAL
+190|              </div>
+191|              <div className="text-cyan-400">
+192|                ► RESPONSE_TIME: &lt; 24 hours
+193|              </div>
+194|              <div className="text-cyan-400">
+195|                ► COLLABORATION_MODE: ACTIVE
+196|              </div>
+197|              <div className="flex items-center space-x-2 mt-4">
+198|                <span className="text-green-400">$</span>
+199|                <motion.span
+200|                  animate={{ opacity: [1, 0, 1] }}
+201|                  transition={{ repeat: Infinity, duration: 1 }}
+202|                  className="text-green-400"
+203|                >
+204|                  _
+205|                </motion.span>
+206|              </div>
+207|            </div>
+208|          </div>
+209|        </motion.div>
+210|      </div>
+211|
+212|      {/* Floating HUD Elements */}
+213|      <div className="absolute inset-0 pointer-events-none">
+214|        {/* Corner brackets */}
+215|        <div className="absolute top-10 left-10 w-8 h-8 border-l-2 border-t-2 border-cyan-400/50" />
+216|        <div className="absolute top-10 right-10 w-8 h-8 border-r-2 border-t-2 border-cyan-400/50" />
+217|        <div className="absolute bottom-10 left-10 w-8 h-8 border-l-2 border-b-2 border-cyan-400/50" />
+218|        <div className="absolute bottom-10 right-10 w-8 h-8 border-r-2 border-b-2 border-cyan-400/50" />
+219|      </div>
+220|    </section>
+221|  )
+222|}
+223|
+224|export default ContactSection
+225|
+
+===END
+
+===FILE: /app/src/components/TechnicalArsenal/TechnicalArsenal.jsx
+/app/src/components/TechnicalArsenal/TechnicalArsenal.jsx:
+1|import { motion } from 'framer-motion'
+2|import { useState } from 'react'
+3|import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts'
+4|
+5|// Import skill icons
+6|import progIcon from '/assets/skils_icons/prog.png'
+7|import frontendIcon from '/assets/skils_icons/frontend.png'
+8|import backendIcon from '/assets/skils_icons/backend.png'
+9|import cloudIcon from '/assets/skils_icons/cloud.png'
+10|import aiIcon from '/assets/skils_icons/ai.png'
+11|import devIcon from '/assets/skils_icons/dev.png'
+12|import testingIcon from '/assets/skils_icons/testing.png'
+13|import analyticsIcon from '/assets/skils_icons/analytics.png'
+14|import methodologiesIcon from '/assets/skils_icons/methodologies.png'
+15|
+16|const TechnicalArsenal = ({ userData }) => {
+17|  const [hoveredSkill, setHoveredSkill] = useState(null)
+18|
+19|  const skillCategories = [
+20|    {
+21|      title: "Programming Languages",
+22|      icon: progIcon,
+23|      key: "languages",
+24|      color: "from-cyan-400 to-blue-500",
+25|      borderColor: "border-cyan-400/30",
+26|      glowColor: "shadow-cyan-400/20"
+27|    },
+28|    {
+29|      title: "Concepts",
+30|      icon: aiIcon,
+31|      key: "concepts",
+32|      color: "from-green-400 to-emerald-500",
+33|      borderColor: "border-green-400/30",
+34|      glowColor: "shadow-green-400/20"
+35|    },
+36|    {
+37|      title: "Frameworks & Libraries",
+38|      icon: frontendIcon,
+39|      key: "frameworks",
+40|      color: "from-yellow-400 to-orange-500",
+41|      borderColor: "border-yellow-400/30",
+42|      glowColor: "shadow-yellow-400/20"
+43|    },
+44|    {
+45|      title: "Development & Tools",
+46|      icon: devIcon,
+47|      key: "development",
+48|      color: "from-gray-400 to-slate-500",
+49|      borderColor: "border-gray-400/30",
+50|      glowColor: "shadow-gray-400/20"
+51|    },
+52|    {
+53|      title: "Testing & Automation",
+54|      icon: testingIcon,
+55|      key: "testing",
+56|      color: "from-indigo-400 to-purple-500",
+57|      borderColor: "border-indigo-400/30",
+58|      glowColor: "shadow-indigo-400/20"
+59|    },
+60|    {
+61|      title: "Systems",
+62|      icon: cloudIcon,
+63|      key: "systems",
+64|      color: "from-purple-400 to-pink-500",
+65|      borderColor: "border-purple-400/30",
+66|      glowColor: "shadow-purple-400/20"
+67|    },
+68|    {
+69|      title: "Databases",
+70|      icon: backendIcon,
+71|      key: "databases",
+72|      color: "from-red-400 to-rose-500",
+73|      borderColor: "border-red-400/30",
+74|      glowColor: "shadow-red-400/20"
+75|    },
+76|    {
+77|      title: "Analytics & BI",
+78|      icon: analyticsIcon,
+79|      key: "analytics",
+80|      color: "from-orange-400 to-red-500",
+81|      borderColor: "border-orange-400/30",
+82|      glowColor: "shadow-orange-400/20"
+83|    },
+84|    {
+85|      title: "Methodologies",
+86|      icon: methodologiesIcon,
+87|      key: "methodologies",
+88|      color: "from-teal-400 to-cyan-500",
+89|      borderColor: "border-teal-400/30",
+90|      glowColor: "shadow-teal-400/20"
+91|    }
+92|  ]
+93|
+94|  // Data for donut chart
+95|  const chartData = skillCategories.map(category => ({
+96|    name: category.title,
+97|    value: userData.skills[category.key]?.length || 0,
+98|    color: category.color,
+99|    fill: `url(#gradient-${category.key})`
+100|  }))
+101|
+102|  const COLORS = [
+103|    '#40e0d0', // cyan - Programming Languages
+104|    '#10b981', // emerald - Concepts
+105|    '#f59e0b', // amber - Frameworks & Libraries  
+106|    '#a855f7', // purple - Development & Tools
+107|    '#ef4444', // red - Testing & Automation
+108|    '#6b7280', // gray - Systems
+109|    '#6366f1', // indigo - Databases
+110|    '#fb923c', // orange - Analytics & BI
+111|    '#14b8a6'  // teal - Methodologies
+112|  ]
+113|
+114|  return (
+115|    <section id="arsenal" className="relative min-h-screen py-20 overflow-hidden">
+116|      {/* Background */}
+117|      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+118|
+119|      {/* Animated grid background */}
+120|      <div className="absolute inset-0 opacity-10">
+121|        <div
+122|          className="w-full h-full"
+123|          style={{
+124|            backgroundImage: `
+125|              linear-gradient(rgba(64, 255, 218, 0.1) 1px, transparent 1px),
+126|              linear-gradient(90deg, rgba(64, 255, 218, 0.1) 1px, transparent 1px)
+127|            `,
+128|            backgroundSize: '40px 40px'
+129|          }}
+130|        />
+131|      </div>
+132|
+133|      {/* Floating particles */}
+134|      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+135|        {[...Array(20)].map((_, i) => (
+136|          <motion.div
+137|            key={i}
+138|            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
+139|            style={{
+140|              left: `${Math.random() * 100}%`,
+141|              top: `${Math.random() * 100}%`,
+142|            }}
+143|            animate={{
+144|              scale: [1, 1.5, 1],
+145|              opacity: [0.4, 0.8, 0.4],
+146|              x: [0, Math.random() * 50 - 25, 0],
+147|              y: [0, Math.random() * 50 - 25, 0],
+148|            }}
+149|            transition={{
+150|              duration: 6 + Math.random() * 4,
+151|              repeat: Infinity,
+152|              delay: Math.random() * 3,
+153|            }}
+154|          />
+155|        ))}
+156|      </div>
+157|
+158|      <div className="relative z-10 max-w-7xl mx-auto px-6">
+159|        {/* Section Header */}
+160|        <motion.div
+161|          initial={{ opacity: 0, y: 30 }}
+162|          whileInView={{ opacity: 1, y: 0 }}
+163|          transition={{ duration: 0.8 }}
+164|          viewport={{ once: true }}
+165|          className="text-center mb-16"
+166|        >
+167|          {/* Terminal Badge */}
+168|          <motion.div
+169|            initial={{ scale: 0 }}
+170|            whileInView={{ scale: 1 }}
+171|            transition={{ duration: 0.6, delay: 0.2 }}
+172|            className="inline-block mb-6"
+173|          >
+174|            <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-full px-6 py-2">
+175|              <span className="text-cyan-400 font-mono text-sm">TECHNICAL_ARSENAL.EXE</span>
+176|            </div>
+177|          </motion.div>
+178|
+179|          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+180|            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-400 to-cyan-400">
+181|              Technical Arsenal
+182|            </span>
+183|          </h2>
+184|
+185|          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+186|            A comprehensive toolkit forged through years of exploration in the digital frontier
+187|          </p>
+188|
+189|          {/* Terminal Command */}
+190|          <motion.div
+191|            initial={{ opacity: 0 }}
+192|            whileInView={{ opacity: 1 }}
+193|            transition={{ delay: 0.5 }}
+194|            className="flex justify-center"
+195|          >
+196|            <div className="bg-black/80 border border-green-500/30 rounded px-4 py-2 font-mono text-sm">
+197|              <span className="text-green-400">$</span>
+198|              <span className="text-white ml-2">cat /dev/skills</span>
+199|              <motion.span
+200|                animate={{ opacity: [1, 0, 1] }}
+201|                transition={{ repeat: Infinity, duration: 1 }}
+202|                className="text-green-400 ml-1"
+203|              >
+204|                _
+205|              </motion.span>
+206|            </div>
+207|          </motion.div>
+208|        </motion.div>
+209|
+210|        {/* Main Content - Full Width Layout */}
+211|        <div className="max-w-7xl mx-auto">
+212|          {/* Distribution Chart - First */}
+213|          <motion.div
+214|            initial={{ opacity: 0, y: 30 }}
+215|            whileInView={{ opacity: 1, y: 0 }}
+216|            transition={{ duration: 0.8 }}
+217|            viewport={{ once: true }}
+218|            className="flex justify-center mb-16"
+219|          >
+220|            <div className="w-full max-w-2xl">
+221|              <h3 className="text-3xl font-bold text-white mb-8 text-center">Skills Distribution</h3>
+222|
+223|              <div className="bg-black/60 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-8">
+224|                {/* Chart Container */}
+225|                <div className="h-80 mb-8">
+226|                  <ResponsiveContainer width="100%" height="100%">
+227|                    <PieChart>
+228|                      <defs>
+229|                        {skillCategories.map((category, index) => (
+230|                          <linearGradient key={category.key} id={`gradient-${category.key}`} x1="0%" y1="0%" x2="100%" y2="100%">
+231|                            <stop offset="0%" stopColor={COLORS[index]} stopOpacity={0.8} />
+232|                            <stop offset="100%" stopColor={COLORS[index]} stopOpacity={0.4} />
+233|                          </linearGradient>
+234|                        ))}
+235|                      </defs>
+236|                      <Pie
+237|                        data={chartData}
+238|                        cx="50%"
+239|                        cy="50%"
+240|                        innerRadius={60}
+241|                        outerRadius={120}
+242|                        paddingAngle={2}
+243|                        dataKey="value"
+244|                      >
+245|                        {chartData.map((entry, index) => (
+246|                          <Cell key={`cell-${index}`} fill={COLORS[index]} />
+247|                        ))}
+248|                      </Pie>
+249|                      <Tooltip
+250|                        contentStyle={{
+251|                          backgroundColor: 'rgba(0, 0, 0, 0.9)',
+252|                          border: '1px solid #40e0d0',
+253|                          borderRadius: '8px',
+254|                          color: '#ffffff',
+255|                          fontSize: '14px'
+256|                        }}
+257|                        labelStyle={{ color: '#40e0d0' }}
+258|                        itemStyle={{ color: '#ffffff' }}
+259|                      />
+260|                    </PieChart>
+261|                  </ResponsiveContainer>
+262|                </div>
+263|
+264|                {/* Chart Legend in 2 columns */}
+265|                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
+266|                  {chartData.map((item, index) => (
+267|                    <div key={item.name} className="flex items-center justify-between">
+268|                      <div className="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
+269|                        <div
+270|                          className="w-3 h-3 sm:w-4 sm:h-4 rounded-full flex-shrink-0"
+271|                          style={{ backgroundColor: COLORS[index] }}
+272|                        />
+273|                        <span className="text-gray-300 text-xs sm:text-sm truncate">{item.name}</span>
+274|                      </div>
+275|                      <span className="text-white font-mono text-xs sm:text-sm ml-2 flex-shrink-0">{item.value}</span>
+276|                    </div>
+277|                  ))}
+278|                </div>
+279|
+280|                {/* Total Skills Count */}
+281|                <motion.div
+282|                  initial={{ scale: 0 }}
+283|                  whileInView={{ scale: 1 }}
+284|                  transition={{ delay: 0.8, type: "spring" }}
+285|                  className="text-center border-t border-gray-700/50 pt-6"
+286|                >
+287|                  <div className="text-4xl font-bold text-white mb-2">
+288|                    {Object.values(userData.skills).reduce((total, skillArray) => total + (skillArray?.length || 0), 0)}
+289|                  </div>
+290|                  <div className="text-gray-400 font-mono text-sm">Total Technologies</div>
+291|                </motion.div>
+292|              </div>
+293|            </div>
+294|          </motion.div>
+295|
+296|          {/* Skills Breakdown - Second */}
+297|          <motion.div
+298|            initial={{ opacity: 0, y: 30 }}
+299|            whileInView={{ opacity: 1, y: 0 }}
+300|            transition={{ duration: 0.8, delay: 0.2 }}
+301|            viewport={{ once: true }}
+302|            className="mb-12"
+303|          >
+304|            <h3 className="text-3xl font-bold text-white mb-8 text-center">Skills Breakdown</h3>
+305|          </motion.div>
+306|
+307|          {/* Skills Grid - 3x3 Grid */}
+308|          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+309|            {skillCategories.map((category, categoryIndex) => (
+310|              <motion.div
+311|                key={category.key}
+312|                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+313|                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+314|                transition={{
+315|                  duration: 0.6,
+316|                  delay: categoryIndex * 0.1,
+317|                  type: "spring",
+318|                  stiffness: 100
+319|                }}
+320|                viewport={{ once: true }}
+321|                className="group"
+322|              >
+323|                {/* Category Card */}
+324|                <div className={`
+325|                  relative h-full bg-black/60 backdrop-blur-sm border rounded-xl p-6 transition-all duration-300
+326|                  hover:bg-black/80 hover:shadow-2xl
+327|                  ${category.borderColor} ${category.glowColor}
+328|                  group-hover:border-opacity-60 group-hover:shadow-xl
+329|                `}>
+330|
+331|                  {/* Header */}
+332|                  <div className="flex items-center space-x-3 mb-6">
+333|                    <div className="group-hover:scale-110 transition-transform duration-300">
+334|                      <img
+335|                        src={category.icon}
+336|                        alt={category.title}
+337|                        className="w-10 h-10 object-contain"
+338|                        onError={(e) => {
+339|                          console.log('Failed to load icon:', category.icon)
+340|                          e.target.style.display = 'none'
+341|                          e.target.parentElement.innerHTML = '<span class="text-white text-lg font-bold">' + category.title.charAt(0) + '</span>'
+342|                        }}
+343|                        onLoad={() => console.log('Icon loaded successfully:', category.icon)}
+344|                      />
+345|                    </div>
+346|
+347|                    <div>
+348|                      <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
+349|                        {category.title}
+350|                      </h3>
+351|                      <div className="text-gray-400 font-mono text-sm">
+352|                        {userData.skills[category.key]?.length || 0} technologies
+353|                      </div>
+354|                    </div>
+355|                  </div>
+356|
+357|                  {/* Skills List */}
+358|                  <div className="space-y-2">
+359|                    {(userData.skills[category.key] || []).map((skill, skillIndex) => (
+360|                      <motion.div
+361|                        key={skill}
+362|                        initial={{ opacity: 0, x: -20 }}
+363|                        whileInView={{ opacity: 1, x: 0 }}
+364|                        transition={{ delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
+365|                        onMouseEnter={() => setHoveredSkill(`${category.key}-${skill}`)}
+366|                        onMouseLeave={() => setHoveredSkill(null)}
+367|                        className="group/skill cursor-default"
+368|                      >
+369|                        <div className={`
+370|                          flex items-center justify-between p-2 rounded-lg border transition-all duration-200
+371|                          bg-gray-800/30 border-gray-600/30
+372|                          hover:bg-gray-700/50 hover:border-gray-500/50
+373|                          ${hoveredSkill === `${category.key}-${skill}` ? 'bg-gray-700/70 border-gray-400/70' : ''}
+374|                        `}>
+375|                          <span className="text-gray-300 group-hover/skill:text-white transition-colors text-sm">
+376|                            {skill}
+377|                          </span>
+378|
+379|                          {/* Skill Level Indicator */}
+380|                          <div className="flex space-x-1">
+381|                            {[...Array(4)].map((_, i) => (
+382|                              <div
+383|                                key={i}
+384|                                className={`
+385|                                  w-1.5 h-1.5 rounded-full transition-all duration-200
+386|                                  ${i < (Math.floor(Math.random() * 2) + 3)
+387|                                    ? `bg-gradient-to-r ${category.color}`
+388|                                    : 'bg-gray-600/50'
+389|                                  }
+390|                                  ${hoveredSkill === `${category.key}-${skill}` ? 'scale-125' : ''}
+391|                                `}
+392|                              />
+393|                            ))}
+394|                          </div>
+395|                        </div>
+396|                      </motion.div>
+397|                    ))}
+398|                  </div>
+399|
+400|                  {/* Hover effect overlay */}
+401|                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-xl" />
+402|                </div>
+403|              </motion.div>
+404|            ))}
+405|          </div>
+406|        </div>
+407|
+408|      </div>
+409|
+410|      {/* Background HUD Elements */}
+411|      <div className="absolute inset-0 pointer-events-none">
+412|        {/* Corner brackets */}
+413|        <div className="absolute top-10 left-10 w-8 h-8 border-l-2 border-t-2 border-cyan-400/30"></div>
+414|        <div className="absolute top-10 right-10 w-8 h-8 border-r-2 border-t-2 border-cyan-400/30"></div>
+415|        <div className="absolute bottom-10 left-10 w-8 h-8 border-l-2 border-b-2 border-cyan-400/30"></div>
+416|        <div className="absolute bottom-10 right-10 w-8 h-8 border-r-2 border-b-2 border-cyan-400/30"></div>
+417|      </div>
+418|    </section>
+419|  )
+420|}
+421|
+422|export default TechnicalArsenal
+423|
+
+===END
+
+===FILE: /app/src/components/GalacticRoadmap/GalacticRoadmap.jsx
+/app/src/components/GalacticRoadmap/GalacticRoadmap.jsx:
+1|﻿import { useState, useEffect, useRef } from 'react'
+2|import { motion, AnimatePresence } from 'framer-motion'
+3|import PropTypes from 'prop-types'
+4|
+5|const GalacticRoadmap = () => {
+6|  const [activeNode, setActiveNode] = useState(null)
+7|  const [isVisible, setIsVisible] = useState(true)
+8|  const containerRef = useRef(null)
+9|
+10|  // Roadmap nodes representing your galactic journey
+11|  const roadmapNodes = [
+12|    {
+13|      id: 'launchpad',
+14|      title: 'Launchpad',
+15|      subtitle: 'HIIT Nigeria',
+16|      period: '2019',
+17|      description: 'Trained in scripting and web design at HIIT Nigeria, gaining early experience in HTML, CSS, and basic PHP. My first exposure to real-world development.',
+18|      achievements: [
+19|        'First exposure to real-world development',
+20|        'HTML, CSS, and basic PHP training',
+21|        'Web design fundamentals',
+22|        'Scripting foundations'
+23|      ],
+24|      techStack: ['HTML', 'CSS', 'PHP', 'Web Design', 'Scripting'],
+25|      coordinates: { x: 10, y: 50 },
+26|      size: 'large',
+27|      glowColor: 'from-blue-400 to-cyan-400',
+28|      icon: '🌑'
+29|    },
+30|    {
+31|      id: 'first-orbit',
+32|      title: 'First Orbit',
+33|      subtitle: 'Pan-Atlantic University',
+34|      period: '2020',
+35|      description: 'Studied Computer Science fundamentals at Pan-Atlantic University — algorithms, discrete math, logic, and systems.',
+36|      achievements: [
+37|        'Computer Science fundamentals',
+38|        'Algorithms and data structures',
+39|        'Discrete mathematics mastery',
+40|        'Logic and systems understanding'
+41|      ],
+42|      techStack: ['Algorithms', 'Discrete Math', 'Logic', 'Systems', 'CS Fundamentals'],
+43|      coordinates: { x: 25, y: 30 },
+44|      size: 'medium',
+45|      glowColor: 'from-purple-400 to-pink-400',
+46|      icon: '🚀'
+47|    },
+48|    {
+49|      id: 'cosmic-shift',
+50|      title: 'Cosmic Shift',
+51|      subtitle: 'Transfer to WSU + NSBE',
+52|      period: '2021 - 2022',
+53|      description: 'Transferred to Washington State University, joined NSBE, became Director of National Communications. Began developing soft skills, team collaboration, and event planning.',
+54|      achievements: [
+55|        'Transferred to Washington State University',
+56|        'Joined NSBE organization',
+57|        'Director of National Communications',
+58|        'Team collaboration and event planning'
+59|      ],
+60|      techStack: ['Leadership', 'Communication', 'Event Planning', 'Team Collaboration', 'NSBE'],
+61|      coordinates: { x: 35, y: 60 },
+62|      size: 'large',
+63|      glowColor: 'from-green-400 to-emerald-400',
+64|      icon: '🛰️'
+65|    },
+66|    {
+67|      id: 'leadership-orbit',
+68|      title: 'Leadership Orbit',
+69|      subtitle: 'NSBE Secretary & Cougar Card Center',
+70|      period: '2023 - 2024',
+71|      description: 'Advanced to NSBE Secretary role while working at Cougar Card Center. Developed project management, organizational leadership, and Microsoft Office communication skills.',
+72|      achievements: [
+73|        'NSBE Secretary position',
+74|        'Cougar Card Center work experience',
+75|        'Project management advancement',
+76|        'Microsoft Office communication mastery'
+77|      ],
+78|      techStack: ['Project Management', 'Microsoft Office', 'Leadership', 'Organization', 'Communication'],
+79|      coordinates: { x: 55, y: 35 },
+80|      size: 'medium',
+81|      glowColor: 'from-orange-400 to-red-400',
+82|      icon: '🎯'
+83|    },
+84|    {
+85|      id: 'conference-command',
+86|      title: 'Conference Command',
+87|      subtitle: 'NSBE Co-Director of Conferences',
+88|      period: '2024 - 2025',
+89|      description: 'Elevated to Co-Director of Conferences, leading major event planning and conference management for NSBE. Coordinating large-scale events and managing cross-functional teams.',
+90|      achievements: [
+91|        'Co-Director of Conferences leadership',
+92|        'Large-scale event coordination',
+93|        'Cross-functional team management',
+94|        'Conference planning expertise'
+95|      ],
+96|      techStack: ['Event Management', 'Conference Planning', 'Team Leadership', 'Coordination', 'NSBE'],
+97|      coordinates: { x: 75, y: 55 },
+98|      size: 'large',
+99|      glowColor: 'from-purple-400 to-violet-400',
+100|      icon: '👥'
+101|    },
+102|    {
+103|      id: 'systems-forge',
+104|      title: 'Systems Forge',
+105|      subtitle: 'DSA Focus & SEL Internship',
+106|      period: '2023',
+107|      description: 'Invested deeply in data structures and algorithms, strengthening core CS skills. Interned at SEL, wrote test scripts, analyzed failure data, and supported software QA processes.',
+108|      achievements: [
+109|        'Deep DSA expertise development',
+110|        'SEL internship experience',
+111|        'Test script development',
+112|        'Software QA processes support'
+113|      ],
+114|      techStack: ['Data Structures', 'Algorithms', 'Testing', 'QA', 'Failure Analysis'],
+115|      coordinates: { x: 65, y: 25 },
+116|      size: 'medium',
+117|      glowColor: 'from-yellow-400 to-orange-400',
+118|      icon: '🪐'
+119|    },
+120|    {
+121|      id: 'architects-orbit',
+122|      title: 'Architects Orbit',
+123|      subtitle: 'Web Dev & Hackathons',
+124|      period: '2024',
+125|      description: 'Explored full-stack development, design patterns, and architecture. Led my capstone, built Hackronomics (won Best Use of MongoDB), learned CI/CD, JWT auth, and modular design.',
+126|      achievements: [
+127|        'Full-stack development mastery',
+128|        'Capstone project leadership',
+129|        'Hackronomics - Best Use of MongoDB',
+130|        'CI/CD and JWT authentication'
+131|      ],
+132|      techStack: ['Full-Stack', 'MongoDB', 'CI/CD', 'JWT', 'Architecture'],
+133|      coordinates: { x: 90, y: 30 },
+134|      size: 'xlarge',
+135|      glowColor: 'from-violet-400 to-purple-400',
+136|      icon: '🌌'
+137|    }
+138|  ]
+139|
+140|  // Intersection Observer for scroll animations
+141|  useEffect(() => {
+142|    const observer = new IntersectionObserver(
+143|      ([entry]) => {
+144|        if (entry.isIntersecting) {
+145|          setIsVisible(true)
+146|        }
+147|      },
+148|      { threshold: 0.3 }
+149|    )
+150|
+151|    if (containerRef.current) {
+152|      observer.observe(containerRef.current)
+153|    }
+154|
+155|    return () => observer.disconnect()
+156|  }, [])
+157|
+158|  // Animated connection lines between nodes
+159|  const ConnectionLine = ({ from, to, delay = 0 }) => {
+160|    const fromNode = roadmapNodes.find(node => node.id === from)
+161|    const toNode = roadmapNodes.find(node => node.id === to)
+162|
+163|    if (!fromNode || !toNode) return null
+164|
+165|    return (
+166|      <motion.line
+167|        x1={`${fromNode.coordinates.x}%`}
+168|        y1={`${fromNode.coordinates.y}%`}
+169|        x2={`${toNode.coordinates.x}%`}
+170|        y2={`${toNode.coordinates.y}%`}
+171|        stroke="url(#connectionGradient)"
+172|        strokeWidth="2"
+173|        strokeDasharray="5,5"
+174|        initial={{ pathLength: 0 }}
+175|        animate={isVisible ? { pathLength: 1 } : { pathLength: 0 }}
+176|        transition={{ duration: 2, delay }}
+177|        className="opacity-60"
+178|      />
+179|    )
+180|  }
+181|
+182|  ConnectionLine.propTypes = {
+183|    from: PropTypes.string.isRequired,
+184|    to: PropTypes.string.isRequired,
+185|    delay: PropTypes.number
+186|  }
+187|
+188|  // Individual roadmap node component
+189|  const RoadmapNode = ({ node, index }) => {
+190|    const [isHovered, setIsHovered] = useState(false)
+191|
+192|    const sizeClasses = {
+193|      medium: 'w-16 h-16',
+194|      large: 'w-20 h-20',
+195|      xlarge: 'w-24 h-24'
+196|    }
+197|
+198|    return (
+199|      <motion.div
+200|        className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+201|        style={{ left: `${node.coordinates.x}%`, top: `${node.coordinates.y}%` }}
+202|        initial={{ scale: 0, opacity: 0 }}
+203|        animate={isVisible ? { scale: 1, opacity: 1 } : { scale: 0, opacity: 0 }}
+204|        transition={{ duration: 0.8, delay: index * 0.3 }}
+205|        onClick={() => setActiveNode(activeNode?.id === node.id ? null : node)}
+206|        onHoverStart={() => setIsHovered(true)}
+207|        onHoverEnd={() => setIsHovered(false)}
+208|      >
+209|        {/* Node Glow Effect */}
+210|        <motion.div
+211|          className={`absolute inset-0 rounded-full bg-gradient-to-r ${node.glowColor} opacity-20 blur-lg`}
+212|          animate={{ scale: [1, 1.2, 1] }}
+213|          transition={{ duration: 3, repeat: Infinity }}
+214|        />
+215|
+216|        {/* Main Node */}
+217|        <motion.div
+218|          className={`relative ${sizeClasses[node.size]} rounded-full bg-gradient-to-r ${node.glowColor} p-1 shadow-2xl`}
+219|          whileHover={{
+220|            scale: 1.15,
+221|            boxShadow: `0 0 30px rgba(${node.glowColor.includes('blue') ? '6, 182, 212' :
+222|              node.glowColor.includes('purple') ? '147, 51, 234' :
+223|                node.glowColor.includes('green') ? '34, 197, 94' :
+224|                  node.glowColor.includes('yellow') ? '251, 146, 60' :
+225|                    node.glowColor.includes('red') ? '239, 68, 68' : '139, 92, 246'}, 0.6)`,
+226|            transition: { duration: 0.3 }
+227|          }}
+228|          whileTap={{ scale: 0.95 }}
+229|        >
+230|          <div className="w-full h-full rounded-full bg-black/80 backdrop-blur-sm border border-white/20 flex items-center justify-center">
+231|            <span className="text-2xl">{node.icon}</span>
+232|          </div>
+233|        </motion.div>
+234|
+235|        {/* Node Label */}
+236|        <motion.div
+237|          className="absolute top-full mt-4 left-1/2 transform -translate-x-1/2 text-center"
+238|          initial={{ opacity: 0, y: 10 }}
+239|          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+240|          transition={{ delay: index * 0.3 + 0.5 }}
+241|        >
+242|          <motion.div
+243|            className="bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-lg px-3 py-2 whitespace-nowrap"
+244|            whileHover={{
+245|              scale: 1.05,
+246|              borderColor: 'rgba(6, 182, 212, 0.6)',
+247|              backgroundColor: 'rgba(0, 0, 0, 0.9)',
+248|              transition: { duration: 0.2 }
+249|            }}
+250|          >
+251|            <h3 className="text-sm font-bold text-cyan-400">{node.title}</h3>
+252|            <p className="text-xs text-gray-300">{node.period}</p>
+253|          </motion.div>
+254|        </motion.div>
+255|
+256|        {/* Orbital Ring */}
+257|        <motion.div
+258|          className="absolute inset-0 rounded-full border border-cyan-400/20"
+259|          style={{
+260|            width: `${sizeClasses[node.size] === 'w-16 h-16' ? '80px' :
+261|              sizeClasses[node.size] === 'w-20 h-20' ? '100px' : '120px'}`,
+262|            height: `${sizeClasses[node.size] === 'w-16 h-16' ? '80px' :
+263|              sizeClasses[node.size] === 'w-20 h-20' ? '100px' : '120px'}`,
+264|            left: '50%',
+265|            top: '50%',
+266|            transform: 'translate(-50%, -50%)'
+267|          }}
+268|          animate={{
+269|            rotate: 360,
+270|            borderColor: isHovered ? 'rgba(6, 182, 212, 0.6)' : 'rgba(6, 182, 212, 0.2)',
+271|            scale: isHovered ? 1.1 : 1
+272|          }}
+273|          transition={{
+274|            rotate: { duration: 20, repeat: Infinity, ease: "linear" },
+275|            borderColor: { duration: 0.3 },
+276|            scale: { duration: 0.3 }
+277|          }}
+278|        />
+279|
+280|        {/* Hover Tooltip */}
+281|        <AnimatePresence>
+282|          {isHovered && (
+283|            <motion.div
+284|              className="absolute -top-16 left-1/2 transform -translate-x-1/2 bg-black/90 border border-cyan-400/50 rounded-lg px-3 py-2 text-xs text-cyan-400 whitespace-nowrap pointer-events-none"
+285|              initial={{ opacity: 0, y: 10, scale: 0.8 }}
+286|              animate={{ opacity: 1, y: 0, scale: 1 }}
+287|              exit={{ opacity: 0, y: 10, scale: 0.8 }}
+288|              transition={{ duration: 0.2 }}
+289|              style={{ zIndex: 1000 }}
+290|            >
+291|              Click to explore {node.subtitle}
+292|              <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-2 h-2 bg-black border-r border-b border-cyan-400/50 rotate-45 -mt-1" />
+293|            </motion.div>
+294|          )}
+295|        </AnimatePresence>
+296|      </motion.div>
+297|    )
+298|  }
+299|
+300|  RoadmapNode.propTypes = {
+301|    node: PropTypes.shape({
+302|      id: PropTypes.string.isRequired,
+303|      title: PropTypes.string.isRequired,
+304|      subtitle: PropTypes.string.isRequired,
+305|      period: PropTypes.string.isRequired,
+306|      coordinates: PropTypes.shape({
+307|        x: PropTypes.number.isRequired,
+308|        y: PropTypes.number.isRequired
+309|      }).isRequired,
+310|      glowColor: PropTypes.string.isRequired,
+311|      size: PropTypes.string.isRequired,
+312|      icon: PropTypes.string.isRequired
+313|    }).isRequired,
+314|    index: PropTypes.number.isRequired
+315|  }
+316|
+317|  return (
+318|    <section
+319|      ref={containerRef}
+320|      className="relative min-h-screen py-20 overflow-hidden bg-black"
+321|      id="roadmap"
+322|    >
+323|      {/* Background Elements */}
+324|      <div className="absolute inset-0">
+325|        {/* Flying Rocket Background Video */}
+326|        <div className="absolute inset-0 overflow-hidden">
+327|          <motion.video
+328|            autoPlay
+329|            loop
+330|            muted
+331|            playsInline
+332|            className="absolute inset-0 w-full h-full object-cover opacity-20"
+333|            style={{ filter: 'hue-rotate(180deg) brightness(0.7)' }}
+334|            initial={{ scale: 1.1 }}
+335|            animate={{
+336|              scale: [1.1, 1.05, 1.1],
+337|              opacity: [0.15, 0.25, 0.15]
+338|            }}
+339|            transition={{
+340|              duration: 8,
+341|              repeat: Infinity,
+342|              ease: "easeInOut"
+343|            }}
+344|          >
+345|            <source src="/assets/contact-page-background-video.mp4" type="video/mp4" />
+346|          </motion.video>
+347|
+348|          {/* Video overlay for better blending */}
+349|          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
+350|        </div>
+351|
+352|        {/* Starfield */}
+353|        <div className="absolute inset-0">
+354|          {[...Array(100)].map((_, i) => (
+355|            <motion.div
+356|              key={i}
+357|              className="absolute w-px h-px bg-white rounded-full"
+358|              style={{
+359|                left: `${Math.random() * 100}%`,
+360|                top: `${Math.random() * 100}%`,
+361|              }}
+362|              animate={{
+363|                opacity: [0.3, 1, 0.3],
+364|                scale: [1, 1.5, 1],
+365|              }}
+366|              transition={{
+367|                duration: 3 + Math.random() * 2,
+368|                repeat: Infinity,
+369|                delay: Math.random() * 2,
+370|              }}
+371|            />
+372|          ))}
+373|        </div>
+374|
+375|        {/* Cosmic Nebula Effect */}
+376|        <div className="absolute inset-0 opacity-20">
+377|          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
+378|          <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl" />
+379|          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl" />
+380|        </div>
+381|
+382|        {/* Flying Rocket Elements */}
+383|        <div className="absolute inset-0 pointer-events-none">
+384|          {/* Rocket 1 - Top to bottom diagonal */}
+385|          <motion.div
+386|            className="absolute text-2xl opacity-60"
+387|            initial={{ x: '-100px', y: '-100px', rotate: 45 }}
+388|            animate={{
+389|              x: 'calc(100vw + 100px)',
+390|              y: 'calc(100vh + 100px)',
+391|              rotate: 45
+392|            }}
+393|            transition={{
+394|              duration: 15,
+395|              repeat: Infinity,
+396|              ease: "linear",
+397|              delay: 0
+398|            }}
+399|          >
+400|            🚀
+401|          </motion.div>
+402|
+403|          {/* Rocket 2 - Bottom to top diagonal */}
+404|          <motion.div
+405|            className="absolute text-xl opacity-40"
+406|            initial={{ x: '-80px', y: 'calc(100vh + 80px)', rotate: -135 }}
+407|            animate={{
+408|              x: 'calc(100vw + 80px)',
+409|              y: '-80px',
+410|              rotate: -135
+411|            }}
+412|            transition={{
+413|              duration: 20,
+414|              repeat: Infinity,
+415|              ease: "linear",
+416|              delay: 8
+417|            }}
+418|          >
+419|            🚀
+420|          </motion.div>
+421|
+422|          {/* Rocket 3 - Left to right */}
+423|          <motion.div
+424|            className="absolute text-lg opacity-50 top-1/3"
+425|            initial={{ x: '-60px', rotate: 90 }}
+426|            animate={{
+427|              x: 'calc(100vw + 60px)',
+428|              rotate: 90
+429|            }}
+430|            transition={{
+431|              duration: 12,
+432|              repeat: Infinity,
+433|              ease: "linear",
+434|              delay: 4
+435|            }}
+436|          >
+437|            🚀
+438|          </motion.div>
+439|        </div>
+440|      </div>
+441|
+442|      {/* Section Header */}
+443|      <motion.div
+444|        className="relative z-10 text-center mb-12 sm:mb-16 lg:mb-20 px-4 sm:px-6"
+445|        initial={{ opacity: 0, y: 50 }}
+446|        animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+447|        transition={{ duration: 1 }}
+448|      >
+449|        <motion.div
+450|          className="inline-block mb-4 sm:mb-6"
+451|          initial={{ scale: 0 }}
+452|          animate={isVisible ? { scale: 1 } : { scale: 0 }}
+453|          transition={{ duration: 0.8, delay: 0.3 }}
+454|        >
+455|          <div className="bg-gradient-to-r from-violet-400/10 to-purple-400/10 border border-violet-400/30 rounded-full px-4 sm:px-6 py-2">
+456|            <span className="text-violet-400 font-mono text-xs sm:text-sm">JOURNEY.LOG</span>
+457|          </div>
+458|        </motion.div>
+459|
+460|        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 px-2 text-violet-400 sm:text-transparent sm:bg-clip-text sm:bg-gradient-to-r sm:from-violet-400 sm:via-cyan-400 sm:to-green-400">
+461|          Galactic Roadmap
+462|        </h2>
+463|
+464|
+465|
+466|
+467|        <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+468|          Navigate through the cosmic milestones of my technical evolution — from HIIT Nigeria to full-stack mastery
+469|        </p>
+470|
+471|        {/* Mission Status */}
+472|        <motion.div
+473|          className="mt-6 sm:mt-8 flex justify-center"
+474|          initial={{ opacity: 0 }}
+475|          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+476|          transition={{ delay: 0.8 }}
+477|        >
+478|          <div className="bg-black/80 border border-green-500/30 rounded-lg px-4 sm:px-6 py-2 sm:py-3">
+479|            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 font-mono text-xs sm:text-sm">
+480|              <div className="flex items-center space-x-2 justify-center sm:justify-start">
+481|                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+482|                <span className="text-green-400">MISSION_STATUS: ACTIVE</span>
+483|              </div>
+484|              <div className="text-gray-400 hidden sm:block">|</div>
+485|              <div className="text-cyan-400 text-center sm:text-left mt-1 sm:mt-0">NODES_EXPLORED: {roadmapNodes.length}</div>
+486|            </div>
+487|          </div>
+488|        </motion.div>
+489|      </motion.div>
+490|
+491|      {/* Roadmap Visualization */}
+492|      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
+493|        <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] w-full hidden md:block">
+494|          {/* SVG for connection lines */}
+495|          <svg className="absolute inset-0 w-full h-full pointer-events-none">
+496|            <defs>
+497|              <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+498|                <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.6" />
+499|                <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.8" />
+500|                <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.6" />
+501|              </linearGradient>
+502|            </defs>
+503|
+504|            {/* Connection lines between nodes */}
+505|            <ConnectionLine from="launchpad" to="first-orbit" delay={1} />
+506|            <ConnectionLine from="first-orbit" to="cosmic-shift" delay={1.5} />
+507|            <ConnectionLine from="cosmic-shift" to="leadership-orbit" delay={2} />
+508|            <ConnectionLine from="leadership-orbit" to="systems-forge" delay={2.5} />
+509|            <ConnectionLine from="systems-forge" to="conference-command" delay={3} />
+510|            <ConnectionLine from="conference-command" to="architects-orbit" delay={3.5} />
+511|          </svg>
+512|
+513|          {/* Roadmap Nodes */}
+514|          {roadmapNodes.map((node, index) => (
+515|            <RoadmapNode key={node.id} node={node} index={index} />
+516|          ))}
+517|        </div>
+518|
+519|        {/* Mobile Timeline Alternative */}
+520|        <div className="block md:hidden mt-12">
+521|          <div className="space-y-8">
+522|            {roadmapNodes.map((node, index) => (
+523|              <motion.div
+524|                key={node.id}
+525|                className="relative flex items-start space-x-4"
+526|                initial={{ opacity: 0, x: -50 }}
+527|                whileInView={{ opacity: 1, x: 0 }}
+528|                transition={{ duration: 0.8, delay: index * 0.2 }}
+529|                viewport={{ once: true }}
+530|              >
+531|                {/* Timeline line */}
+532|                {index < roadmapNodes.length - 1 && (
+533|                  <div className="absolute left-6 top-16 w-0.5 h-16 bg-gradient-to-b from-cyan-400 to-purple-400 opacity-60" />
+534|                )}
+535|
+536|                {/* Node icon */}
+537|                <div className={`relative w-12 h-12 rounded-full bg-gradient-to-r ${node.glowColor} p-1 shadow-lg flex-shrink-0`}>
+538|                  <div className="w-full h-full rounded-full bg-black/80 flex items-center justify-center">
+539|                    <span className="text-lg">{node.icon}</span>
+540|                  </div>
+541|                </div>
+542|
+543|                {/* Content */}
+544|                <div
+545|                  className="flex-1 bg-black/80 border border-cyan-400/30 rounded-lg p-4 cursor-pointer hover:border-cyan-400/60 transition-all duration-300"
+546|                  onClick={() => setActiveNode(node)}
+547|                >
+548|                  <h3 className="text-lg font-bold text-cyan-400 mb-1">{node.title}</h3>
+549|                  <p className="text-sm text-gray-400 mb-2">{node.period}</p>
+550|                  <p className="text-gray-300 text-sm leading-relaxed">{node.description}</p>
+551|
+552|                  <div className="flex flex-wrap gap-1 mt-3">
+553|                    {node.techStack.slice(0, 3).map((tech, techIndex) => (
+554|                      <span key={techIndex} className="px-2 py-1 bg-gray-800/60 rounded text-xs text-gray-400">
+555|                        {tech}
+556|                      </span>
+557|                    ))}
+558|                    {node.techStack.length > 3 && (
+559|                      <span className="px-2 py-1 bg-gray-800/60 rounded text-xs text-gray-400">
+560|                        +{node.techStack.length - 3} more
+561|                      </span>
+562|                    )}
+563|                  </div>
+564|                </div>
+565|              </motion.div>
+566|            ))}
+567|          </div>
+568|        </div>
+569|      </div>
+570|
+571|      {/* Active Node Details Modal */}
+572|      <AnimatePresence>
+573|        {activeNode && (
+574|          <motion.div
+575|            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm"
+576|            initial={{ opacity: 0 }}
+577|            animate={{ opacity: 1 }}
+578|            exit={{ opacity: 0 }}
+579|            onClick={() => setActiveNode(null)}
+580|          >
+581|            <motion.div
+582|              className="bg-black/90 border border-cyan-400/30 rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+583|              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+584|              animate={{ scale: 1, opacity: 1, y: 0 }}
+585|              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+586|              onClick={(e) => e.stopPropagation()}
+587|            >
+588|              {/* Header */}
+589|              <div className="flex items-center justify-between mb-6">
+590|                <div className="flex items-center space-x-4">
+591|                  <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${activeNode.glowColor} p-1`}>
+592|                    <div className="w-full h-full rounded-full bg-black flex items-center justify-center">
+593|                      <span className="text-xl">{activeNode.icon}</span>
+594|                    </div>
+595|                  </div>
+596|                  <div>
+597|                    <h3 className="text-2xl font-bold text-white">{activeNode.title}</h3>
+598|                    <p className="text-cyan-400">{activeNode.subtitle}</p>
+599|                    <p className="text-gray-400 text-sm">{activeNode.period}</p>
+600|                  </div>
+601|                </div>
+602|                <button
+603|                  onClick={() => setActiveNode(null)}
+604|                  className="text-gray-400 hover:text-white transition-colors"
+605|                >
+606|                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+607|                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+608|                  </svg>
+609|                </button>
+610|              </div>
+611|
+612|              {/* Description */}
+613|              <p className="text-gray-300 mb-6 leading-relaxed">{activeNode.description}</p>
+614|
+615|              {/* Achievements */}
+616|              <div className="mb-6">
+617|                <h4 className="text-lg font-semibold text-cyan-400 mb-3">Mission Achievements</h4>
+618|                <div className="grid gap-2">
+619|                  {activeNode.achievements.map((achievement, index) => (
+620|                    <motion.div
+621|                      key={index}
+622|                      className="flex items-center space-x-3 p-3 bg-gray-800/50 rounded-lg"
+623|                      initial={{ opacity: 0, x: -20 }}
+624|                      animate={{ opacity: 1, x: 0 }}
+625|                      transition={{ delay: index * 0.1 }}
+626|                    >
+627|                      <div className="w-2 h-2 bg-green-400 rounded-full" />
+628|                      <span className="text-gray-300">{achievement}</span>
+629|                    </motion.div>
+630|                  ))}
+631|                </div>
+632|              </div>
+633|
+634|              {/* Tech Stack */}
+635|              <div>
+636|                <h4 className="text-lg font-semibold text-cyan-400 mb-3">Technology Arsenal</h4>
+637|                <div className="flex flex-wrap gap-2">
+638|                  {activeNode.techStack.map((tech, index) => (
+639|                    <motion.span
+640|                      key={index}
+641|                      className="px-3 py-1 bg-gradient-to-r from-gray-800 to-gray-700 border border-gray-600 rounded-full text-sm text-gray-300"
+642|                      initial={{ opacity: 0, scale: 0.8 }}
+643|                      animate={{ opacity: 1, scale: 1 }}
+644|                      transition={{ delay: index * 0.05 }}
+645|                    >
+646|                      {tech}
+647|                    </motion.span>
+648|                  ))}
+649|                </div>
+650|              </div>
+651|            </motion.div>
+652|          </motion.div>
+653|        )}
+654|      </AnimatePresence>
+655|
+656|      {/* Floating HUD Elements */}
+657|      <div className="absolute inset-0 pointer-events-none">
+658|        {/* Corner brackets */}
+659|        <div className="absolute top-4 sm:top-6 lg:top-10 left-4 sm:left-6 lg:left-10 w-6 h-6 sm:w-8 sm:h-8 border-l-2 border-t-2 border-violet-400/50" />
+660|        <div className="absolute top-4 sm:top-6 lg:top-10 right-4 sm:right-6 lg:right-10 w-6 h-6 sm:w-8 sm:h-8 border-r-2 border-t-2 border-violet-400/50" />
+661|        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 left-4 sm:left-6 lg:left-10 w-6 h-6 sm:w-8 sm:h-8 border-l-2 border-b-2 border-violet-400/50" />
+662|        <div className="absolute bottom-4 sm:bottom-6 lg:bottom-10 right-4 sm:right-6 lg:right-10 w-6 h-6 sm:w-8 sm:h-8 border-r-2 border-b-2 border-violet-400/50" />
+663|      </div>
+664|    </section>
+665|  )
+666|}
+667|
+668|export default GalacticRoadmap
+669|
+
+===END
+
+===FILE: /app/src/components/ProjectSection/BentoGrid.jsx
+/app/src/components/ProjectSection/BentoGrid.jsx:
+1|import { useState } from 'react'
+2|import { motion, AnimatePresence } from 'framer-motion'
+3|import BentoCard from './BentoCard'
+4|import ProjectModal from './ProjectModal'
+5|
+6|const BentoGrid = ({ userData }) => {
+7|  const [selectedProject, setSelectedProject] = useState(null)
+8|
+9|  // Arrange projects in a non-conventional bento grid pattern
+10|  const getGridLayout = () => {
+11|    const projects = userData.projects || []
+12|
+13|    // Create a more sophisticated grid layout
+14|    const layout = []
+15|
+16|    projects.forEach((project, index) => {
+17|      let className = ""
+18|
+19|      // Create asymmetric bento patterns for visual interest
+20|      switch (project.gridSize) {
+21|        case "large":
+22|          // Large items take 2x2 space
+23|          className = "col-span-2 row-span-2"
+24|          break
+25|        case "medium":
+26|          // Alternate medium items between wide and tall
+27|          if (index % 4 === 1 || index % 4 === 3) {
+28|            className = "col-span-2 row-span-1" // Wide
+29|          } else {
+30|            className = "col-span-1 row-span-2" // Tall
+31|          }
+32|          break
+33|        case "small":
+34|          // Small items take single space
+35|          className = "col-span-1 row-span-1"
+36|          break
+37|        default:
+38|          className = "col-span-1 row-span-1"
+39|      }
+40|
+41|      layout.push({
+42|        ...project,
+43|        className
+44|      })
+45|    })
+46|
+47|    return layout
+48|  }
+49|
+50|  const projectLayout = getGridLayout()
+51|
+52|  return (
+53|    <>
+54|      <section id="projects" className="relative min-h-screen py-20 overflow-hidden">
+55|        {/* Background */}
+56|        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+57|
+58|        {/* Floating cosmic elements */}
+59|        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+60|          {/* Grid lines for cyber effect */}
+61|          <div className="absolute inset-0 opacity-10">
+62|            <div
+63|              className="w-full h-full"
+64|              style={{
+65|                backgroundImage: `
+66|                  linear-gradient(rgba(64, 255, 218, 0.1) 1px, transparent 1px),
+67|                  linear-gradient(90deg, rgba(64, 255, 218, 0.1) 1px, transparent 1px)
+68|                `,
+69|                backgroundSize: '50px 50px'
+70|              }}
+71|            />
+72|          </div>
+73|
+74|          {/* Floating particles */}
+75|          {[...Array(15)].map((_, i) => (
+76|            <motion.div
+77|              key={i}
+78|              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
+79|              style={{
+80|                left: `${Math.random() * 100}%`,
+81|                top: `${Math.random() * 100}%`,
+82|              }}
+83|              animate={{
+84|                scale: [1, 1.5, 1],
+85|                opacity: [0.6, 1, 0.6],
+86|                x: [0, Math.random() * 100 - 50, 0],
+87|                y: [0, Math.random() * 100 - 50, 0],
+88|              }}
+89|              transition={{
+90|                duration: 8 + Math.random() * 4,
+91|                repeat: Infinity,
+92|                delay: Math.random() * 3,
+93|              }}
+94|            />
+95|          ))}
+96|        </div>
+97|
+98|        {/* Section Header */}
+99|        <motion.div
+100|          initial={{ opacity: 0, y: 30 }}
+101|          whileInView={{ opacity: 1, y: 0 }}
+102|          transition={{ duration: 0.8 }}
+103|          viewport={{ once: true }}
+104|          className="relative z-10 text-center mb-16 px-6"
+105|        >
+106|          <motion.div
+107|            initial={{ scale: 0 }}
+108|            whileInView={{ scale: 1 }}
+109|            transition={{ duration: 0.6, delay: 0.2 }}
+110|            className="inline-block mb-4"
+111|          >
+112|            <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-full px-6 py-2">
+113|              <span className="text-cyan-400 font-mono text-sm">PROJECTS.EXE</span>
+114|            </div>
+115|          </motion.div>
+116|
+117|          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+118|            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-400 to-cyan-400">
+119|              Personal Projects
+120|            </span>
+121|          </h2>
+122|          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+123|            Navigate through my constellation of personal projects — each one a unique world of innovation and code
+124|          </p>
+125|
+126|          {/* Terminal-style decoration */}
+127|          <motion.div
+128|            initial={{ opacity: 0 }}
+129|            whileInView={{ opacity: 1 }}
+130|            transition={{ delay: 0.5 }}
+131|            className="mt-8 flex justify-center"
+132|          >
+133|            <div className="bg-black/80 border border-green-500/30 rounded px-4 py-2 font-mono text-sm">
+134|              <span className="text-green-400">$</span>
+135|              <span className="text-white ml-2">ls -la /projects/</span>
+136|              <motion.span
+137|                animate={{ opacity: [1, 0, 1] }}
+138|                transition={{ repeat: Infinity, duration: 1 }}
+139|                className="text-green-400 ml-1"
+140|              >
+141|                _
+142|              </motion.span>
+143|            </div>
+144|          </motion.div>
+145|        </motion.div>
+146|
+147|        {/* Bento Grid */}
+148|        <div className="relative z-10 max-w-7xl mx-auto px-6">
+149|          <motion.div
+150|            initial={{ opacity: 0 }}
+151|            whileInView={{ opacity: 1 }}
+152|            transition={{ duration: 0.8, delay: 0.3 }}
+153|            viewport={{ once: true }}
+154|            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px]"
+155|          >
+156|            {projectLayout.map((project, index) => (
+157|              <motion.div
+158|                key={project.id}
+159|                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+160|                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+161|                transition={{
+162|                  duration: 0.6,
+163|                  delay: index * 0.1,
+164|                  type: "spring",
+165|                  stiffness: 100
+166|                }}
+167|                viewport={{ once: true }}
+168|                className={project.className}
+169|              >
+170|                <BentoCard
+171|                  project={project}
+172|                  onClick={() => setSelectedProject(project)}
+173|                />
+174|              </motion.div>
+175|            ))}
+176|          </motion.div>
+177|
+178|          {/* Explore More Button */}
+179|          <motion.div
+180|            initial={{ opacity: 0, y: 20 }}
+181|            whileInView={{ opacity: 1, y: 0 }}
+182|            transition={{ duration: 0.6, delay: 1 }}
+183|            viewport={{ once: true }}
+184|            className="mt-8 flex justify-center"
+185|          >
+186|            <motion.a
+187|              href="https://github.com/Ehiane?tab=repositories"
+188|              target="_blank"
+189|              rel="noopener noreferrer"
+190|              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-green-500/20 border border-cyan-400/30 rounded-lg font-mono text-cyan-400 hover:text-white transition-all duration-300 hover:border-cyan-400/60 hover:shadow-lg hover:shadow-cyan-400/20"
+191|              whileHover={{ scale: 1.05 }}
+192|              whileTap={{ scale: 0.95 }}
+193|            >
+194|              <span className="relative z-10 flex items-center space-x-2">
+195|                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+196|                  <path d="M12 0C5.374 0 0 5.373 0 12 0 17.302 3.438 21.8 8.207 23.387c.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+197|                </svg>
+198|                <span>Explore More Projects</span>
+199|                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+200|                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+201|                </svg>
+202|              </span>
+203|              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-green-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+204|            </motion.a>
+205|          </motion.div>
+206|
+207|          {/* Terminal Status Bar */}
+208|          <motion.div
+209|            initial={{ opacity: 0, y: 20 }}
+210|            whileInView={{ opacity: 1, y: 0 }}
+211|            transition={{ duration: 0.6, delay: 0.8 }}
+212|            viewport={{ once: true }}
+213|            className="mt-12 flex justify-center"
+214|          >
+215|
+216|            <div className="bg-black/80 backdrop-blur-sm border border-cyan-400/30 rounded-lg px-3 sm:px-6 py-2 sm:py-3 mx-2 sm:mx-0">
+217|              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 font-mono text-xs sm:text-sm space-y-1 sm:space-y-0">
+218|                {/* Status - Always visible */}
+219|                <div className="flex items-center justify-center sm:justify-start space-x-2">
+220|                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+221|                  <span className="text-green-400">STATUS: OPERATIONAL</span>
+222|                </div>
+223|
+224|                {/* Projects count - Show on mobile */}
+225|                <div className="text-gray-400 hidden sm:block">|</div>
+226|                <div className="text-cyan-400 text-center sm:text-left">
+227|                  PROJECTS: {userData.projects?.length || 0}
+228|                </div>
+229|
+230|                {/* Tech stack - Hide on mobile */}
+231|                <div className="text-gray-400 hidden md:block">|</div>
+232|                <div className="text-yellow-400 hidden md:block">
+233|                  TECH_STACK: FULL_SPECTRUM
+234|                </div>
+235|              </div>
+236|            </div>
+237|          </motion.div>
+238|        </div>
+239|
+240|        {/* HUD Elements */}
+241|        <div className="absolute inset-0 pointer-events-none">
+242|          {/* Corner brackets */}
+243|          <div className="absolute top-10 left-10 w-8 h-8 border-l-2 border-t-2 border-cyan-400/50"></div>
+244|          <div className="absolute top-10 right-10 w-8 h-8 border-r-2 border-t-2 border-cyan-400/50"></div>
+245|          <div className="absolute bottom-10 left-10 w-8 h-8 border-l-2 border-b-2 border-cyan-400/50"></div>
+246|          <div className="absolute bottom-10 right-10 w-8 h-8 border-r-2 border-b-2 border-cyan-400/50"></div>
+247|        </div>
+248|      </section>
+249|
+250|      {/* Project Modal */}
+251|      <AnimatePresence>
+252|        {selectedProject && (
+253|          <ProjectModal
+254|            project={selectedProject}
+255|            isOpen={!!selectedProject}
+256|            onClose={() => setSelectedProject(null)}
+257|          />
+258|        )}
+259|      </AnimatePresence>
+260|    </>
+261|  )
+262|}
+263|
+264|export default BentoGrid
+265|
+
+===END
+
+===FILE: /app/src/components/ProfessionalInvolvements/ProfessionalInvolvements.jsx
+/app/src/components/ProfessionalInvolvements/ProfessionalInvolvements.jsx:
+1|import { useState } from 'react'
+2|import { motion, AnimatePresence } from 'framer-motion'
+3|import PropTypes from 'prop-types'
+4|
+5|const ProfessionalInvolvements = ({ userData }) => {
+6|  const [selectedInvolvement, setSelectedInvolvement] = useState(null)
+7|  const professionalInvolvements = userData.professionalInvolvements || []
+8|
+9|  return (
+10|    <>
+11|      <section id="professional" className="relative min-h-screen py-20 overflow-hidden bg-black">
+12|        {/* Background */}
+13|        <div className="absolute inset-0">
+14|          {/* Starfield */}
+15|          <div className="absolute inset-0">
+16|            {[...Array(80)].map((_, i) => (
+17|              <motion.div
+18|                key={i}
+19|                className="absolute w-px h-px bg-white rounded-full"
+20|                style={{
+21|                  left: `${Math.random() * 100}%`,
+22|                  top: `${Math.random() * 100}%`,
+23|                }}
+24|                animate={{
+25|                  opacity: [0.3, 1, 0.3],
+26|                  scale: [1, 1.5, 1],
+27|                }}
+28|                transition={{
+29|                  duration: 3 + Math.random() * 2,
+30|                  repeat: Infinity,
+31|                  delay: Math.random() * 2,
+32|                }}
+33|              />
+34|            ))}
+35|          </div>
+36|
+37|          {/* Cosmic nebula effect */}
+38|          <div className="absolute inset-0 opacity-20">
+39|            <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full blur-3xl" />
+40|            <div className="absolute bottom-1/3 left-1/3 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full blur-3xl" />
+41|          </div>
+42|        </div>
+43|
+44|        {/* Section Header */}
+45|        <motion.div
+46|          initial={{ opacity: 0, y: 30 }}
+47|          whileInView={{ opacity: 1, y: 0 }}
+48|          transition={{ duration: 0.8 }}
+49|          viewport={{ once: true }}
+50|          className="relative z-10 text-center mb-16 px-6"
+51|        >
+52|          <motion.div
+53|            initial={{ scale: 0 }}
+54|            whileInView={{ scale: 1 }}
+55|            transition={{ duration: 0.6, delay: 0.2 }}
+56|            className="inline-block mb-4"
+57|          >
+58|            <div className="bg-orange-400/10 border border-orange-400/30 rounded-full px-6 py-2">
+59|              <span className="text-orange-400 font-mono text-sm">EXPERIENCE.LOG</span>
+60|            </div>
+61|          </motion.div>
+62|
+63|          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+64|            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-orange-400">
+65|              Work Experience
+66|            </span>
+67|          </h2>
+68|          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+69|            Professional experiences and leadership roles that shaped my engineering journey
+70|          </p>
+71|        </motion.div>
+72|
+73|        {/* Timeline Layout */}
+74|        <div className="relative z-10 max-w-6xl mx-auto px-6">
+75|          <div className="relative">
+76|            {/* Central Timeline Line */}
+77|            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-orange-400 via-red-400 to-orange-400 opacity-60" />
+78|
+79|            {/* Timeline Items */}
+80|            <div className="space-y-16">
+81|              {/* Mobile Simple Cards Layout (visible only on mobile) */}
+82|              <div className="md:hidden z-10 max-w-2xl mx-auto px-2 space-y-6">
+83|                {professionalInvolvements.map((involvement, index) => (
+84|                  <motion.div
+85|                    key={`mobile-${involvement.id}`}
+86|                    initial={{ opacity: 0, y: 30 }}
+87|                    whileInView={{ opacity: 1, y: 0 }}
+88|                    transition={{ duration: 0.5, delay: index * 0.1 }}
+89|                    viewport={{ once: true }}
+90|                    onClick={() => setSelectedInvolvement(involvement)}
+91|                    className="bg-black/80 backdrop-blur-sm border border-orange-400/30 rounded-xl p-5 cursor-pointer hover:border-orange-400/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/20"
+92|                  >
+93|                    {/* Mobile Header */}
+94|                    <div className="flex items-start justify-between mb-3">
+95|                      <div className="flex-1 min-w-0">
+96|                        <h3 className="text-lg font-bold text-orange-400 mb-1 truncate">
+97|                          {involvement.name}
+98|                        </h3>
+99|                        <p className="text-sm text-gray-400 mb-1 truncate">{involvement.role}</p>
+100|                        <p className="text-xs text-gray-500 truncate">{involvement.company}</p>
+101|                      </div>
+102|                      <div className="bg-orange-400/10 border border-orange-400/30 rounded-full px-3 py-1 ml-3 flex-shrink-0">
+103|                        <span className="text-orange-400 text-xs font-mono whitespace-nowrap">{involvement.period}</span>
+104|                      </div>
+105|                    </div>
+106|                    {/* Mobile Description */}
+107|                    <p className="text-gray-300 text-sm mb-3 leading-relaxed">
+108|                      {involvement.description.length > 100
+109|                        ? `${involvement.description.substring(0, 100)}...`
+110|                        : involvement.description
+111|                      }
+112|                    </p>
+113|                    {/* Mobile Highlights */}
+114|                    <div className="mb-3">
+115|                      <h4 className="text-xs font-semibold text-orange-400 mb-2">Key Highlights</h4>
+116|                      <ul className="space-y-1">
+117|                        {involvement.highlights.slice(0, 2).map((highlight, highlightIndex) => (
+118|                          <li key={highlightIndex} className="flex items-start text-gray-300 text-xs">
+119|                            <div className="w-1 h-1 bg-orange-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+120|                            <span className="leading-relaxed">{highlight}</span>
+121|                          </li>
+122|                        ))}
+123|                      </ul>
+124|                    </div>
+125|                    {/* Mobile Tags */}
+126|                    <div className="flex flex-wrap gap-1 mb-2">
+127|                      {involvement.tags.slice(0, 3).map((tech, techIndex) => (
+128|                        <span
+129|                          key={techIndex}
+130|                          className="px-2 py-1 bg-orange-400/10 border border-orange-400/20 rounded text-xs text-orange-300"
+131|                        >
+132|                          {tech}
+133|                        </span>
+134|                      ))}
+135|                      {involvement.tags.length > 3 && (
+136|                        <span className="px-2 py-1 bg-gray-800/60 rounded text-xs text-gray-400">
+137|                          +{involvement.tags.length - 3} more
+138|                        </span>
+139|                      )}
+140|                    </div>
+141|                    {/* Mobile Click indicator */}
+142|                    <div className="text-xs text-orange-400/60">
+143|                      Tap to view details →
+144|                    </div>
+145|                  </motion.div>
+146|                ))}
+147|              </div>
+148|              {/* Desktop Timeline Cards Layout */}
+149|              {/* Desktop Timeline Layout (visible only on desktop) */}
+150|              <div className="hidden md:block">
+151|                {professionalInvolvements.map((involvement, index) => (
+152|                  <motion.div
+153|                    key={involvement.id}
+154|                    className={`relative flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} group`}
+155|                    initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+156|                    whileInView={{ opacity: 1, x: 0 }}
+157|                    transition={{ duration: 0.8, delay: index * 0.3 }}
+158|                    viewport={{ once: true }}
+159|                  >
+160|                    {/* Timeline Node */}
+161|                    <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-orange-400 to-red-400 rounded-full border-4 border-black z-10 group-hover:scale-125 transition-transform duration-300" />
+162|
+163|                    {/* Content Card */}
+164|                    <motion.div
+165|                      className={`relative ${index % 2 === 0 ? 'mr-auto pr-12' : 'ml-auto pl-12'} w-5/12 cursor-pointer group-hover:z-20`}
+166|                      whileHover={{ scale: 1.02 }}
+167|                      onClick={() => setSelectedInvolvement(involvement)}
+168|                    >
+169|                      <div className="bg-black/80 backdrop-blur-sm border border-orange-400/30 rounded-xl p-6 group-hover:border-orange-400/60 transition-all duration-300 hover:shadow-lg hover:shadow-orange-400/20">
+170|                        {/* Header */}
+171|                        <div className="flex items-center space-x-4 mb-4">
+172|                          <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-400 to-red-400 p-1">
+173|                            <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+174|                              {involvement.icon ? (
+175|                                <img
+176|                                  src={involvement.icon}
+177|                                  alt={`${involvement.name} icon`}
+178|                                  className="w-8 h-8 object-contain"
+179|                                />
+180|                              ) : (
+181|                                <span className="text-xl">🏢</span>
+182|                              )}
+183|                            </div>
+184|                          </div>
+185|                          <div className="flex-1 min-w-0">
+186|                            <h3 className="text-xl font-bold text-orange-400 mb-1 truncate">
+187|                              {involvement.name}
+188|                            </h3>
+189|                            <p className="text-gray-400 truncate">{involvement.role}</p>
+190|                            <p className="text-sm text-gray-500 truncate">{involvement.company}</p>
+191|                          </div>
+192|                          <div className="bg-orange-400/10 border border-orange-400/30 rounded-full px-4 py-2">
+193|                            <span className="text-orange-400 font-mono text-sm">{involvement.period}</span>
+194|                          </div>
+195|                        </div>
+196|
+197|                        {/* Description */}
+198|                        <p className="text-gray-300 mb-4 leading-relaxed">
+199|                          {involvement.description}
+200|                        </p>
+201|
+202|                        {/* Highlights */}
+203|                        <div className="mb-4">
+204|                          <h4 className="text-sm font-semibold text-orange-400 mb-2">Key Highlights</h4>
+205|                          <ul className="space-y-1">
+206|                            {involvement.highlights.slice(0, 3).map((highlight, highlightIndex) => (
+207|                              <li key={highlightIndex} className="flex items-start text-gray-300 text-sm">
+208|                                <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-3 mt-2 flex-shrink-0" />
+209|                                <span className="leading-relaxed">{highlight}</span>
+210|                              </li>
+211|                            ))}
+212|                          </ul>
+213|                        </div>
+214|
+215|                        {/* Tags */}
+216|                        <div className="flex flex-wrap gap-2">
+217|                          {involvement.tags.slice(0, 4).map((tech, techIndex) => (
+218|                            <span
+219|                              key={techIndex}
+220|                              className="px-3 py-1 bg-orange-400/10 border border-orange-400/20 rounded-full text-sm text-orange-300"
+221|                            >
+222|                              {tech}
+223|                            </span>
+224|                          ))}
+225|                          {involvement.tags.length > 4 && (
+226|                            <span className="px-3 py-1 bg-gray-800/60 rounded-full text-sm text-gray-400">
+227|                              +{involvement.tags.length - 4} more
+228|                            </span>
+229|                          )}
+230|                        </div>
+231|
+232|                        {/* Connector Line */}
+233|                        <div className={`absolute top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? 'right-0' : 'left-0'} w-12 h-0.5 bg-gradient-to-r from-orange-400/50 to-transparent`} />
+234|                      </div>
+235|                    </motion.div>
+236|                  </motion.div>
+237|                ))}
+238|              </div>
+239|            </div>
+240|          </div>
+241|
+242|          {/* Terminal Status Bar */}
+243|          <motion.div
+244|            initial={{ opacity: 0, y: 20 }}
+245|            whileInView={{ opacity: 1, y: 0 }}
+246|            transition={{ duration: 0.6, delay: 0.8 }}
+247|            viewport={{ once: true }}
+248|            className="mt-16 flex justify-center"
+249|          >
+250|            <div className="bg-black/80 backdrop-blur-sm border border-orange-400/30 rounded-lg px-3 sm:px-6 py-2 sm:py-3 mx-2 sm:mx-0">
+251|              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 font-mono text-xs sm:text-sm space-y-1 sm:space-y-0">
+252|                {/* Status - Always visible */}
+253|                <div className="flex items-center justify-center sm:justify-start space-x-2">
+254|                  <div className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></div>
+255|                  <span className="text-orange-400">STATUS: PROFESSIONAL</span>
+256|                </div>
+257|
+258|                {/* Experiences count - Show on mobile */}
+259|                <div className="text-gray-400 hidden sm:block">|</div>
+260|                <div className="text-red-400 text-center sm:text-left">
+261|                  EXPERIENCES: {professionalInvolvements.length}
+262|                </div>
+263|
+264|                {/* Impact - Hide on mobile */}
+265|                <div className="text-gray-400 hidden md:block">|</div>
+266|                <div className="text-yellow-400 hidden md:block">
+267|                  IMPACT: ENTERPRISE_LEVEL
+268|                </div>
+269|              </div>
+270|            </div>
+271|          </motion.div>
+272|        </div>
+273|
+274|        {/* HUD Elements */}
+275|        <div className="absolute inset-0 pointer-events-none">
+276|          {/* Corner brackets */}
+277|          <div className="absolute top-10 left-10 w-8 h-8 border-l-2 border-t-2 border-orange-400/50"></div>
+278|          <div className="absolute top-10 right-10 w-8 h-8 border-r-2 border-t-2 border-orange-400/50"></div>
+279|          <div className="absolute bottom-10 left-10 w-8 h-8 border-l-2 border-b-2 border-orange-400/50"></div>
+280|          <div className="absolute bottom-10 right-10 w-8 h-8 border-r-2 border-b-2 border-orange-400/50"></div>
+281|        </div>
+282|      </section>
+283|
+284|      {/* Professional Modal */}
+285|      <AnimatePresence>
+286|        {selectedInvolvement && (
+287|          <motion.div
+288|            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80 backdrop-blur-sm"
+289|            initial={{ opacity: 0 }}
+290|            animate={{ opacity: 1 }}
+291|            exit={{ opacity: 0 }}
+292|            onClick={() => setSelectedInvolvement(null)}
+293|          >
+294|            <motion.div
+295|              className="bg-black/90 border border-orange-400/30 rounded-2xl p-8 max-w-3xl w-full max-h-[80vh] overflow-y-auto"
+296|              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+297|              animate={{ scale: 1, opacity: 1, y: 0 }}
+298|              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+299|              onClick={(e) => e.stopPropagation()}
+300|            >
+301|              {/* Header */}
+302|              <div className="flex items-center justify-between mb-6">
+303|                <div className="flex items-center space-x-4">
+304|                  <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-400 to-red-400 p-1">
+305|                    <div className="w-full h-full rounded-full bg-black flex items-center justify-center overflow-hidden">
+306|                      {selectedInvolvement.icon ? (
+307|                        <img
+308|                          src={selectedInvolvement.icon}
+309|                          alt={`${selectedInvolvement.name} icon`}
+310|                          className="w-8 h-8 object-contain"
+311|                        />
+312|                      ) : (
+313|                        <span className="text-xl">🏢</span>
+314|                      )}
+315|                    </div>
+316|                  </div>
+317|                  <div>
+318|                    <h3 className="text-2xl font-bold text-white">{selectedInvolvement.name}</h3>
+319|                    <p className="text-orange-400">{selectedInvolvement.role}</p>
+320|                    <p className="text-gray-400 text-sm">{selectedInvolvement.company} • {selectedInvolvement.period}</p>
+321|                  </div>
+322|                </div>
+323|                <button
+324|                  onClick={() => setSelectedInvolvement(null)}
+325|                  className="text-gray-400 hover:text-white transition-colors"
+326|                >
+327|                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+328|                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+329|                  </svg>
+330|                </button>
+331|              </div>
+332|
+333|              {/* Full Description */}
+334|              <p className="text-gray-300 mb-6 leading-relaxed">{selectedInvolvement.fullDescription}</p>
+335|
+336|              {/* Highlights */}
+337|              <div className="mb-6">
+338|                <h4 className="text-lg font-semibold text-orange-400 mb-3">Key Highlights</h4>
+339|                <div className="grid gap-2">
+340|                  {selectedInvolvement.highlights.map((highlight, index) => (
+341|                    <motion.div
+342|                      key={index}
+343|                      className="flex items-center space-x-3 p-3 bg-gray-800/50 rounded-lg"
+344|                      initial={{ opacity: 0, x: -20 }}
+345|                      animate={{ opacity: 1, x: 0 }}
+346|                      transition={{ delay: index * 0.1 }}
+347|                    >
+348|                      <div className="w-2 h-2 bg-orange-400 rounded-full" />
+349|                      <span className="text-gray-300">{highlight}</span>
+350|                    </motion.div>
+351|                  ))}
+352|                </div>
+353|              </div>
+354|
+355|              {/* Achievements */}
+356|              <div className="mb-6">
+357|                <h4 className="text-lg font-semibold text-orange-400 mb-3">Achievements</h4>
+358|                <div className="grid gap-2">
+359|                  {selectedInvolvement.achievements.map((achievement, index) => (
+360|                    <motion.div
+361|                      key={index}
+362|                      className="flex items-center space-x-3 p-3 bg-gray-800/50 rounded-lg"
+363|                      initial={{ opacity: 0, x: -20 }}
+364|                      animate={{ opacity: 1, x: 0 }}
+365|                      transition={{ delay: index * 0.1 }}
+366|                    >
+367|                      <div className="w-2 h-2 bg-green-400 rounded-full" />
+368|                      <span className="text-gray-300">{achievement}</span>
+369|                    </motion.div>
+370|                  ))}
+371|                </div>
+372|              </div>
+373|
+374|              {/* Tags */}
+375|              <div>
+376|                <h4 className="text-lg font-semibold text-orange-400 mb-3">Tags</h4>
+377|                <div className="flex flex-wrap gap-2">
+378|                  {selectedInvolvement.tags.map((tech, index) => (
+379|                    <motion.span
+380|                      key={index}
+381|                      className="px-3 py-1 bg-gradient-to-r from-orange-800/50 to-red-800/50 border border-orange-600/30 rounded-full text-sm text-gray-300"
+382|                      initial={{ opacity: 0, scale: 0.8 }}
+383|                      animate={{ opacity: 1, scale: 1 }}
+384|                      transition={{ delay: index * 0.05 }}
+385|                    >
+386|                      {tech}
+387|                    </motion.span>
+388|                  ))}
+389|                </div>
+390|              </div>
+391|            </motion.div>
+392|          </motion.div>
+393|        )}
+394|      </AnimatePresence>
+395|    </>
+396|  )
+397|}
+398|
+399|ProfessionalInvolvements.propTypes = {
+400|  userData: PropTypes.shape({
+401|    professionalInvolvements: PropTypes.array
+402|  }).isRequired
+403|}
+404|
+405|export default ProfessionalInvolvements
+406|
+
+===END
