@@ -50,73 +50,72 @@ const HeroSection = ({ userData }) => {
       '/help': [
         'Available commands:',
         '  /help     - Show this help menu',
-        '  /about    - Learn more about QuantDoppler',
-        '  /skills   - View technical skills',
-        '  /projects - Show recent projects',
-        '  /roadmap  - View galactic journey',
-        '  /contact  - Get contact information',
-        '  /joke     - Random dad joke (proceed with caution)',
+        '  /about    - Bureau manifest — who we are',
+        '  /skills   - View technical capabilities',
+        '  /projects - Deployed programs and missions',
+        '  /roadmap  - View mission timeline',
+        '  /contact  - Initiate secure uplink',
+        '  /joke     - Classified humor (use with caution)',
         '  /clear    - Clear terminal (also: clear, /cls, cls)',
         '  /time     - Show current time',
-        '  /status   - System status'
+        '  /status   - Mission status report'
       ],
       '/about': [
-        'QuantDoppler — Full-Stack Engineer & Systems Architect',
-        'AI Integrator. Deep-Tech Builder.',
+        'QuantDoppler — Sovereign Systems Engineer',
+        'AI-Driven Architect. Deep-Tech Builder.',
         '',
-        'Engineering sovereign-grade solutions that bridge',
-        'technology and real-world human systems.',
+        'A deep-tech engineering bureau forging enterprise-grade',
+        'systems for industries that cannot fail.',
         '',
-        'Fun fact: I speak to computers better than humans 🤖'
+        'From first telemetry to live deployment — single trajectory. 🛰️'
       ],
       '/skills': [
-        'Technical Arsenal:',
-        '• Languages: Python, JavaScript, C++, TypeScript',
+        'Technical Capabilities:',
+        '• Languages: Python, JavaScript, C++, TypeScript, C#',
         '• Frameworks: React, Node.js, Flask, .NET',
-        '• Databases: PostgreSQL, MongoDB, MySQL',
-        '• Cloud: AWS, Docker, CI/CD',
-        '• AI/ML: TensorFlow, Scikit-learn',
+        '• Databases: PostgreSQL, MongoDB, MySQL, SQLite',
+        '• Cloud & CI/CD: AWS, Docker, CI/CD Pipelines',
+        '• AI/ML: TensorFlow, LSTM, NLP, Deep Learning',
         '',
-        'Current superpower: Turning coffee into code ☕'
+        'Doctrine: engineer it once. deploy it right. 🔒'
       ],
       '/projects': [
-        'Recent Projects:',
-        '• Hackronomics - Economic analysis platform',
-        '• Plum - AI-powered financial management',
-        '• Yelp Analytics - ML-driven data insights',
+        'Deployed Programs:',
+        '• Hackronomics — AI-powered financial intelligence system',
+        '• Milestone — Full-stack nonprofit operations platform',
+        '• Yelp Analytics — ETL + ML-driven data intelligence',
         '',
-        'Want to see more? Scroll down to explore! 🚀'
+        'Scroll down to review the full mission logs. 🛰️'
       ],
       '/roadmap': [
-        'Galactic Journey Initiated 🌌',
+        'Mission Timeline Initialized 🌌',
         '',
-        'Navigating to roadmap section...',
-        'Mission timeline loading...',
+        'Descending into mission history...',
+        'Trajectory log loading...',
         '',
-        'From launchpad to command center - explore my journey! 🚀'
+        'From launchpad to command center — trajectory unlocked. 🚀'
       ],
       '/contact': [
-        'How to reach me:',
+        'Secure Uplink Channels:',
         '• GitHub: https://github.com/ehiane',
-        '• LinkedIn: https://www.linkedin.com/in/ehiane-oigiagbe/',
-        '• Email: Professional inquiries welcome',
+        '• Email: Mission-critical inquiries only',
         '',
-        'I promise to respond faster than government websites 📧'
+        'Response window: < 24 hours. Zero handoffs. 📡'
       ],
       '/joke': [
-        'Why do programmers prefer dark mode?',
+        'Why do engineers prefer dark mode?',
         '',
-        'Because light attracts bugs! 🐛',
+        'Because light attracts bugs — and we have zero-tolerance. 🐛',
         '',
-        '...I\'ll see myself out 🚪'
+        '...bureau humor. classified. 🚪'
       ],
       '/time': [`Current time: ${new Date().toLocaleString()}`],
       '/status': [
-        'System Status: ✅ OPERATIONAL',
-        'Coffee Level: ☕ OPTIMAL',
-        'Bug Count: 🐛 MINIMAL',
-        'Motivation: 🚀 MAXIMUM',
-        'Social Battery: 🔋 CHARGING...'
+        'Mission Status: ✅ OPERATIONAL',
+        'Stack Readiness: 🛰️ DEPLOYMENT READY',
+        'Threat Level: 🔒 SECURED',
+        'Motivation: 🚀 MAXIMUM THRUST',
+        'Uptime: 💡 99.9% SOVEREIGN'
       ],
       '/clear': ['clear'],
       '/cls': ['clear'],
@@ -443,19 +442,6 @@ const HeroSection = ({ userData }) => {
                         <span className="text-gray-300 group-hover:text-white transition-colors">GitHub</span>
                       </motion.a>
 
-                      <motion.a
-                        href={userData?.personal?.linkedin || "https://www.linkedin.com/in/ehiane-oigiagbe/"}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-2 px-4 py-2 bg-blue-800/50 hover:bg-blue-700/70 border border-blue-600/50 hover:border-cyan-400/50 rounded-lg transition-all duration-300 group"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <svg className="w-5 h-5 text-blue-400 group-hover:text-cyan-400 transition-colors" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        <span className="text-blue-300 group-hover:text-white transition-colors">LinkedIn</span>
-                      </motion.a>
                     </motion.div>
                   )}
                 </div>
@@ -616,10 +602,6 @@ const HeroSection = ({ userData }) => {
                       </motion.span>
                     </button>
 
-                    <button className="flex items-center space-x-2 px-4 py-3 bg-black/50 hover:bg-black/70 border border-gray-500/30 hover:border-gray-400 rounded-lg transition-all duration-300">
-                      <a download href="/assets/EhianeOigiagbe.pdf" className="text-gray-300 font-mono text-sm">DOWNLOAD_CV</a>
-                      <span className="text-gray-400">↓</span>
-                    </button>
                   </div>
                 </motion.div>
               )}

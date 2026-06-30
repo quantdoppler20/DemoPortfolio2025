@@ -12,7 +12,6 @@ const navLinks = [
 
 const socials = [
   { label: 'GitHub', href: 'https://github.com/ehiane' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ehiane-oigiagbe/' },
 ]
 
 export default function Navbar() {

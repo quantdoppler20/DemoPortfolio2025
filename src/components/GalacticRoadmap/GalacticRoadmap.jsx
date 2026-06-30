@@ -14,12 +14,12 @@ const GalacticRoadmap = () => {
       title: 'Launchpad',
       subtitle: 'HIIT Nigeria',
       period: '2019',
-      description: 'Trained in scripting and web design at HIIT Nigeria, gaining early experience in HTML, CSS, and basic PHP. My first exposure to real-world development.',
+      description: 'First telemetry acquired at HIIT Nigeria — foundational training in HTML, CSS, and PHP. Mission parameters initialized. Ground zero: raw signal, no framework, no shortcuts.',
       achievements: [
-        'First exposure to real-world development',
-        'HTML, CSS, and basic PHP training',
-        'Web design fundamentals',
-        'Scripting foundations'
+        'Mission parameters initialized from zero',
+        'HTML, CSS, and PHP telemetry acquired',
+        'Web design doctrine established',
+        'Scripting fundamentals forged'
       ],
       techStack: ['HTML', 'CSS', 'PHP', 'Web Design', 'Scripting'],
       coordinates: { x: 10, y: 50 },
@@ -32,12 +32,12 @@ const GalacticRoadmap = () => {
       title: 'First Orbit',
       subtitle: 'Pan-Atlantic University',
       period: '2020',
-      description: 'Studied Computer Science fundamentals at Pan-Atlantic University — algorithms, discrete math, logic, and systems.',
+      description: 'Entered academic orbit at Pan-Atlantic University, acquiring core CS doctrine — algorithms, discrete mathematics, logic systems, and computational theory. The architecture of the mind was built here.',
       achievements: [
-        'Computer Science fundamentals',
-        'Algorithms and data structures',
-        'Discrete mathematics mastery',
-        'Logic and systems understanding'
+        'CS doctrine and theory acquired',
+        'Algorithms and data structures mastered',
+        'Discrete mathematics — mission critical',
+        'Logic and systems architecture unlocked'
       ],
       techStack: ['Algorithms', 'Discrete Math', 'Logic', 'Systems', 'CS Fundamentals'],
       coordinates: { x: 25, y: 30 },
@@ -50,12 +50,12 @@ const GalacticRoadmap = () => {
       title: 'Cosmic Shift',
       subtitle: 'Transfer to WSU + NSBE',
       period: '2021 - 2022',
-      description: 'Transferred to Washington State University, joined NSBE, became Director of National Communications. Began developing soft skills, team collaboration, and event planning.',
+      description: 'Mission trajectory shifted to Washington State University. Joined NSBE and assumed Director of National Communications — commanding cross-chapter communication, event coordination, and organizational intelligence at a national level.',
       achievements: [
-        'Transferred to Washington State University',
-        'Joined NSBE organization',
-        'Director of National Communications',
-        'Team collaboration and event planning'
+        'Trajectory shifted to WSU — new sector',
+        'NSBE — Director of National Communications',
+        'Cross-chapter command and coordination',
+        'Organizational intelligence operations'
       ],
       techStack: ['Leadership', 'Communication', 'Event Planning', 'Team Collaboration', 'NSBE'],
       coordinates: { x: 35, y: 60 },
@@ -68,12 +68,12 @@ const GalacticRoadmap = () => {
       title: 'Leadership Orbit',
       subtitle: 'NSBE Secretary & Cougar Card Center',
       period: '2023 - 2024',
-      description: 'Advanced to NSBE Secretary role while working at Cougar Card Center. Developed project management, organizational leadership, and Microsoft Office communication skills.',
+      description: 'Advanced to NSBE Secretary while running concurrent operations at the Cougar Card Center. Strengthened command protocols in project management, organizational systems, and high-volume administrative operations.',
       achievements: [
-        'NSBE Secretary position',
-        'Cougar Card Center work experience',
-        'Project management advancement',
-        'Microsoft Office communication mastery'
+        'NSBE Secretary — command protocols enforced',
+        'Concurrent field operations at Cougar Card Center',
+        'Project management discipline advanced',
+        'High-volume administrative operations mastered'
       ],
       techStack: ['Project Management', 'Microsoft Office', 'Leadership', 'Organization', 'Communication'],
       coordinates: { x: 55, y: 35 },
@@ -86,12 +86,12 @@ const GalacticRoadmap = () => {
       title: 'Conference Command',
       subtitle: 'NSBE Co-Director of Conferences',
       period: '2024 - 2025',
-      description: 'Elevated to Co-Director of Conferences, leading major event planning and conference management for NSBE. Coordinating large-scale events and managing cross-functional teams.',
+      description: 'Elevated to Co-Director of Conferences — commanding large-scale event deployments and cross-functional team operations for NSBE\'s national presence. Strategic coordination at enterprise scale.',
       achievements: [
-        'Co-Director of Conferences leadership',
-        'Large-scale event coordination',
-        'Cross-functional team management',
-        'Conference planning expertise'
+        'Co-Director of Conferences — elevated command',
+        'Large-scale national event deployments',
+        'Cross-functional team operations directed',
+        'Enterprise-scale strategic coordination'
       ],
       techStack: ['Event Management', 'Conference Planning', 'Team Leadership', 'Coordination', 'NSBE'],
       coordinates: { x: 75, y: 55 },
@@ -104,12 +104,12 @@ const GalacticRoadmap = () => {
       title: 'Systems Forge',
       subtitle: 'DSA Focus & SEL Internship',
       period: '2023',
-      description: 'Invested deeply in data structures and algorithms, strengthening core CS skills. Interned at SEL, wrote test scripts, analyzed failure data, and supported software QA processes.',
+      description: 'Deep immersion in data structures and algorithms forged the computational core. Deployed at SEL as a Test Engineer — authoring test scripts, conducting failure data analysis, and supporting enterprise-grade QA infrastructure that protects critical systems.',
       achievements: [
-        'Deep DSA expertise development',
-        'SEL internship experience',
-        'Test script development',
-        'Software QA processes support'
+        'Computational core forged through deep DSA',
+        'SEL — Test Engineer deployment',
+        'Enterprise-grade test scripts authored',
+        'Failure data analysis and QA infrastructure'
       ],
       techStack: ['Data Structures', 'Algorithms', 'Testing', 'QA', 'Failure Analysis'],
       coordinates: { x: 65, y: 25 },
@@ -122,12 +122,12 @@ const GalacticRoadmap = () => {
       title: 'Architects Orbit',
       subtitle: 'Web Dev & Hackathons',
       period: '2024',
-      description: 'Explored full-stack development, design patterns, and architecture. Led my capstone, built Hackronomics (won Best Use of MongoDB), learned CI/CD, JWT auth, and modular design.',
+      description: 'Full-stack architecture unlocked. Led the capstone mission. Built Hackronomics — awarded Best Use of MongoDB at CrimsonCode 2025. Mastered CI/CD pipelines, JWT authentication, and sovereign modular system design.',
       achievements: [
-        'Full-stack development mastery',
-        'Capstone project leadership',
-        'Hackronomics - Best Use of MongoDB',
-        'CI/CD and JWT authentication'
+        'Full-stack architecture — mission unlocked',
+        'Capstone mission led end-to-end',
+        'Hackronomics — Best Use of MongoDB awarded',
+        'CI/CD, JWT, and sovereign modular design'
       ],
       techStack: ['Full-Stack', 'MongoDB', 'CI/CD', 'JWT', 'Architecture'],
       coordinates: { x: 90, y: 30 },

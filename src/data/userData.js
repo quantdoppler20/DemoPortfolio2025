@@ -2,20 +2,19 @@
 export const userData = {
   personal: {
     name: "QuantDoppler",
-    subtitle: "Sovereign Systems Engineer. AI Integrator. Deep-Tech Builder.",
-    description: "A deep-tech engineering force forging enterprise-grade software for systems that cannot fail. From first commit to live deployment — full-stack ownership, zero handoffs, and solutions built to scale under real-world pressure.",
+    subtitle: "Sovereign Systems Engineer. AI-Driven Architect. Deep-Tech Builder.",
+    description: "A deep-tech engineering bureau forging enterprise-grade systems for industries that cannot fail. From first telemetry to live mission deployment — a single trajectory, full-stack ownership, zero handoffs, zero compromise.",
     location: "Available Worldwide",
-    email: "ehiane@example.com", // Update with actual email
-    github: "https://github.com/ehiane", // Update with actual GitHub
-    linkedin: "https://www.linkedin.com/in/ehiane-oigiagbe/",
+    email: "ehiane@example.com",
+    github: "https://github.com/ehiane",
   },
   
   terminalSequence: [
-    "> initializing sovereign systems...",
-    "> loading mission parameters...", 
-    "> compiling engineering modules...",
-    "> synchronizing deployment timeline...",
-    "> all systems nominal. welcome, commander_"
+    "> initializing bureau systems...",
+    "> loading mission parameters...",
+    "> compiling sovereign stack...",
+    "> synchronizing deployment trajectory...",
+    "> all systems nominal. mission ready, commander_"
   ],
   
   projects: [
