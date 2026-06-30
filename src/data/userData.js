@@ -47,7 +47,7 @@ export const userData = {
       id: "hackronomics",
       name: "Hackronomics",
       description: "Award-winning AI-powered financial assistant built at CrimsonCode Hackathon 2025",
-      fullDescription: "At WSU's 2025 CrimsonCode Hackathon, our team engineered Hackronomics — a web app that helps users track spending and receive AI-driven financial guidance. I led the React frontend and integrated MongoDB with OpenAI to intelligently categorize transactions and surface affordable alternatives through natural language prompts. The project earned the "Best Use of MongoDB" award for its innovative fusion of AI and personal finance.",
+      fullDescription: "At WSU's 2025 CrimsonCode Hackathon, our team engineered Hackronomics — a web app that helps users track spending and receive AI-driven financial guidance. I led the React frontend and integrated MongoDB with OpenAI to intelligently categorize transactions and surface affordable alternatives through natural language prompts. The project earned the 'Best Use of MongoDB' award for its innovative fusion of AI and personal finance.",
       techStack: ["React", "Node.js", "MongoDB", "OpenAI API", "Data Visualization", "Three.js", "REST APIs"],
       highlights: [
         "Won 'Best Use of MongoDB' award",
