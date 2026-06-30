@@ -517,14 +517,13 @@ const HeroSection = ({ userData }) => {
                 </motion.div>
                 
                 <h1 className="text-4xl md:text-5xl font-bold mb-2 text-center">
-                  <span className="text-white">Hi, I'm </span>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400">
-                    {userData?.personal?.name?.split(' ')[0] || 'QuantDoppler'}
+                    {userData?.personal?.name || 'QuantDoppler'}
                   </span>
                 </h1>
-                
-                <p className="text-xl text-gray-300 mb-4 text-center">
-                  {userData?.personal?.title || 'Full-Stack Engineer'}. {userData?.personal?.subtitle || 'AI Explorer. Systems Thinker.'}
+
+                <p className="text-sm text-gray-300 mb-4 text-center font-mono tracking-wide leading-relaxed">
+                  {userData?.personal?.subtitle || 'Sovereign Systems Engineering. Deep-Tech at Scale.'}
                 </p>
 
                 {/* Stats Grid */}
@@ -535,9 +534,9 @@ const HeroSection = ({ userData }) => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="text-green-400 font-mono text-xs group-hover:text-green-300 transition-colors">EXPERIENCE</div>
-                    <div className="text-white font-bold group-hover:text-green-100 transition-colors">5+ Years </div>
-                    <div className="text-white font-bold group-hover:text-green-100 transition-colors">(Personal + Professional) </div>
+                    <div className="text-green-400 font-mono text-xs group-hover:text-green-300 transition-colors">ENGAGEMENTS</div>
+                    <div className="text-white font-bold group-hover:text-green-100 transition-colors">5+ Years</div>
+                    <div className="text-gray-400 text-xs group-hover:text-green-100 transition-colors">Enterprise Grade</div>
                     <motion.div
                       className="text-green-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       initial={{ opacity: 0 }}
@@ -552,8 +551,8 @@ const HeroSection = ({ userData }) => {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    <div className="text-cyan-400 font-mono text-xs group-hover:text-cyan-300 transition-colors">PROJECTS</div>
-                    <div className="text-white font-bold group-hover:text-cyan-100 transition-colors">{userData?.projects?.length || 3}+ Active</div>
+                    <div className="text-cyan-400 font-mono text-xs group-hover:text-cyan-300 transition-colors">PROGRAMS</div>
+                    <div className="text-white font-bold group-hover:text-cyan-100 transition-colors">{userData?.projects?.length || 3}+ Deployed</div>
                     <motion.div
                       className="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                       initial={{ opacity: 0 }}

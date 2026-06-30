@@ -134,7 +134,7 @@ const MusicPlayer = () => {
         drag
         dragMomentum={false}
         dragElastic={0}
-        className="fixed bottom-6 left-6 z-[60] select-none touch-none"
+        className="fixed bottom-6 right-6 z-[60] select-none touch-none"
         style={{ cursor: 'grab' }}
         whileDrag={{ cursor: 'grabbing', scale: 1.02 }}
         initial={{ opacity: 0, y: 20 }}

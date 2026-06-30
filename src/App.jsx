@@ -45,13 +45,29 @@ function App() {
       <AnimatePresence>
         {showSkipButton && currentSection !== 'home' && (
           <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
             onClick={skipToHome}
-            className="fixed top-6 right-6 z-50 px-4 py-2 bg-cosmic-purple/80 hover:bg-cosmic-purple border border-cosmic-glow rounded-lg backdrop-blur-sm transition-all duration-300 hover:shadow-lg hover:shadow-cosmic-glow/30"
+            whileHover={{ scale: 1.06 }}
+            whileTap={{ scale: 0.93 }}
+            className="fixed top-6 right-6 z-50 flex items-center gap-2 px-3 py-2 rounded-xl font-mono text-[10px] tracking-widest text-cyan-400 select-none"
+            style={{
+              background: 'rgba(0,0,0,0.75)',
+              border: '1px solid rgba(34,211,238,0.25)',
+              backdropFilter: 'blur(16px)',
+              boxShadow: '0 4px 16px rgba(0,0,0,0.5), 0 0 12px rgba(34,211,238,0.06)'
+            }}
           >
-            Skip Intro
+            <span className="text-cyan-400/50">//</span>
+            SKIP_INTRO
+            <motion.span
+              animate={{ opacity: [1, 0.3, 1] }}
+              transition={{ duration: 1.2, repeat: Infinity }}
+              className="text-cyan-400/70 text-xs"
+            >
+              ›
+            </motion.span>
           </motion.button>
         )}
       </AnimatePresence>
