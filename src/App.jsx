@@ -11,6 +11,7 @@ import GalacticRoadmap from './components/GalacticRoadmap/GalacticRoadmap'
 import ProfessionalInvolvements from './components/ProfessionalInvolvements/ProfessionalInvolvements'
 import ContactSection from './components/ContactSection/ContactSection'
 import MusicPlayer from './components/MusicPlayer/MusicPlayer'
+import SoundSystem from './components/SoundSystem/SoundSystem'
 import { userData } from './data/userData'
 
 function App() {
@@ -36,7 +37,8 @@ function App() {
 
   return (
     <div className="min-h-screen bg-cosmic-black text-white overflow-x-hidden">
-      {/* Persistent Music Player - visible on all pages */}
+      {/* Persistent systems — visible on all pages */}
+      <SoundSystem />
       <MusicPlayer />
 
       {/* Skip Button - Only show during intro sequence */}
