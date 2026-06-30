@@ -2,8 +2,8 @@
 export const userData = {
   personal: {
     name: "QuantDoppler",
-    subtitle: "AI Explorer. Systems Thinker.",
-    description: "IInnovativesoftware engineer with expertise in full-stack development, AI integration, and systems architecture. Passionate about building scalable solutions that bridge technology and human experience.",
+    subtitle: "Full-Stack Engineer. AI Integrator. Systems Architect.",
+    description: "Software engineer specializing in full-stack development, AI integration, and scalable systems architecture. I build solutions that are robust under pressure, elegant in design, and meaningful in impact — bridging the gap between cutting-edge technology and real human experience.",
     location: "Available Worldwide",
     email: "ehiane@example.com", // Update with actual email
     github: "https://github.com/ehiane", // Update with actual GitHub
@@ -11,25 +11,25 @@ export const userData = {
   },
   
   terminalSequence: [
-    "> initializing protocol...",
-    "> loading personal modules...", 
-    "> compiling thoughts...",
-    "> syncing timeline...",
-    "> welcome, explorer_"
+    "> initializing systems...",
+    "> loading mission parameters...", 
+    "> compiling experience modules...",
+    "> synchronizing timeline...",
+    "> all systems nominal. welcome, explorer_"
   ],
   
   projects: [
     {
       id: "milestone",
       name: "Milestone Inventory Tracking App",
-      description: "Capstone Project:  Full-stack inventory system for nonprofit organization",
-      fullDescription: "At a nonprofit serving individuals with developmental disabilities, equipment tracking was manual and error-prone. I co-led the development of a full-stack inventory system with role-based access, automated testing, and real-time status updates. As a result, the organization now tracks over 150+ items with improved accountability.",
+      description: "Capstone Project: Full-stack inventory system built for a nonprofit organization",
+      fullDescription: "A nonprofit serving individuals with developmental disabilities relied on manual, error-prone equipment tracking. I co-led the end-to-end development of a full-stack inventory system featuring role-based access control, automated testing, and real-time status updates. The result: 150+ items now tracked with measurable accountability and zero manual confusion.",
       techStack: ["React", "Node.js", "Express", "MongoDB", "Jest", "Cypress", "Role-based Auth"],
       highlights: [
         "Role-based access control system",
-        "Automated testing implementation",
+        "Automated testing with full coverage",
         "Real-time status updates",
-        "Security enhnaced API routes "
+        "Security-hardened API routes"
       ],
       metrics: {
         items: "150+",
@@ -46,14 +46,14 @@ export const userData = {
     {
       id: "hackronomics",
       name: "Hackronomics",
-      description: " AI-Powered Financial Assistant - Hackathon Award Winning project",
-      fullDescription: "At WSU’s 2025 CrimsonCode Hackathon, our team created Hackronomics, a web app designed to help users track spending and receive AI-driven financial suggestions. I engineered the frontend in React and integrated MongoDB with OpenAI to categorize transactions and suggest affordable alternatives using natural language prompts. Our solution earned the “Best Use of MongoDB” award for its innovative application of AI to personal finance.",
+      description: "Award-winning AI-powered financial assistant built at CrimsonCode Hackathon 2025",
+      fullDescription: "At WSU's 2025 CrimsonCode Hackathon, our team engineered Hackronomics — a web app that helps users track spending and receive AI-driven financial guidance. I led the React frontend and integrated MongoDB with OpenAI to intelligently categorize transactions and surface affordable alternatives through natural language prompts. The project earned the "Best Use of MongoDB" award for its innovative fusion of AI and personal finance.",
       techStack: ["React", "Node.js", "MongoDB", "OpenAI API", "Data Visualization", "Three.js", "REST APIs"],
       highlights: [
         "Won 'Best Use of MongoDB' award",
-        "AI expense categorization",
-        "Personalized savings insights",
-        "Data visualization dashboards"
+        "AI-powered expense categorization",
+        "Personalized savings recommendations",
+        "Interactive data visualization dashboards"
       ],
       metrics: {
         achievement: "Best Use of MongoDB",
@@ -69,14 +69,14 @@ export const userData = {
     {
       id: "fundraiser",
       name: "Fundraiser Management System",
-      description: " Mock Donation platform for scholarship fund tracking and management",
-      fullDescription: "Our class project simulated a donation platform for students to raise and track scholarship funds. I designed the UI, implemented C# backend logic, and wrote NUnit tests to ensure correct donation processing. It successfully supported multiple fundraising workflows and demonstrated robust validation and modular architecture.",
+      description: "Mock donation platform for scholarship fund tracking and management",
+      fullDescription: "A class project simulating a real-world donation platform for student scholarship fundraising. I designed the UI, implemented the C# backend logic, and authored NUnit tests to verify correct donation processing across multiple workflows. The system demonstrated robust validation, clean modular architecture, and production-ready software design patterns.",
       techStack: ["C#", "Winforms", ".NET", "XML", "NUnit", "Software Design Patterns", "Entity Framework"],
       highlights: [
-        "Robust donation processing",
-        "Multiple fundraising workflows",
-        "Comprehensive NUnit testing",
-        "Modular architecture design"
+        "Robust donation processing engine",
+        "Multiple fundraising workflow support",
+        "Comprehensive NUnit test suite",
+        "Clean modular architecture"
       ],
       metrics: {
         workflows: "Multiple",
@@ -91,8 +91,8 @@ export const userData = {
     {
       id: "spreadsheet",
       name: "Spreadsheet Engine",
-      description: "Win-forms Powered Spreadsheet application made from scratch",
-      fullDescription: "To deepen my understanding of data structures and expression parsing, I built a spreadsheet app with formula support and cell referencing. I implemented undo/redo stacks, color formatting, and a cell dependency engine in C#. The result was a fully functional desktop app with over 80 passing unit tests.",
+      description: "WinForms-powered spreadsheet application built from scratch",
+      fullDescription: "To deepen my understanding of data structures and expression parsing, I engineered a fully functional spreadsheet application with formula support and live cell referencing. I implemented undo/redo stacks, color formatting, and a cell dependency engine in C# — all validated by 80+ passing unit tests. A pure systems-engineering exercise from first principles.",
       techStack: ["C#", "WinForms", ".NET", "OOP", "Data Structures", "Expression Parsing", "Unit Testing"],
       highlights: [
         "Formula support and cell referencing",
@@ -113,14 +113,14 @@ export const userData = {
     {
       id: "imdb",
       name: "IMDb Movie Sentiment Analysis",
-      description: "LSTM model for movie review sentiment classification",
-      fullDescription: "To explore NLP, I trained an LSTM model on 50K IMDb reviews to classify positive vs. negative sentiments. I used Keras and TensorFlow with tokenization and dropout layers to reduce overfitting. The model reached 84% accuracy and provided visual insights on emotional patterns in film reviews.",
-      techStack: ["Python", "TensorFlow", "word-embeddings", "LSTM", "NLP", "deep-learingng", "neural-network"],
+      description: "LSTM deep learning model for movie review sentiment classification",
+      fullDescription: "To explore the intersection of NLP and deep learning, I trained an LSTM model on 50,000 IMDb reviews to classify positive versus negative sentiment. Built with Keras and TensorFlow, the model uses tokenization and dropout regularization to minimize overfitting — achieving 84% accuracy and surfacing meaningful emotional patterns across film reviews.",
+      techStack: ["Python", "TensorFlow", "Word Embeddings", "LSTM", "NLP", "Deep Learning", "Neural Networks"],
       highlights: [
-        "50K IMDb reviews dataset",
-        "84% accuracy achieved",
-        "LSTM neural network",
-        "Visual sentiment insights"
+        "50K IMDb reviews training dataset",
+        "84% classification accuracy",
+        "LSTM neural network architecture",
+        "Visual sentiment pattern insights"
       ],
       metrics: {
         reviews: "50K",
@@ -135,14 +135,14 @@ export const userData = {
     {
       id: "yelp-data",
       name: "Yelp Data Analysis & Insights",
-      description: " ETL pipeline and analytics for Yelp's massive dataset",
-      fullDescription: "For a database project, I needed to extract insights from Yelp's massive dataset. I created an ETL pipeline using pandas and PostgreSQL, enabling efficient search, filtering, and trend analysis across cities and categories. The system visualized key business patterns and helped users make location-based decisions.",
+      description: "ETL pipeline and analytics engine for Yelp's massive open dataset",
+      fullDescription: "Tasked with extracting meaningful insights from Yelp's massive public dataset, I designed an end-to-end ETL pipeline using Pandas and PostgreSQL — enabling efficient search, filtering, and trend analysis across cities and business categories. The system surfaced key business patterns and empowered users to make smarter, location-aware decisions from over 6 million data points.",
       techStack: ["Python", "Pandas", "PostgreSQL", "ETL", "Data Visualization", "Analytics"],
       highlights: [
-        "Massive dataset processing",
-        "ETL pipeline implementation",
-        "Trend analysis across cities",
-        "Location-based decision insights"
+        "6M+ data points processed",
+        "ETL pipeline from ingestion to insight",
+        "Multi-city trend analysis",
+        "Location-based decision intelligence"
       ],
       metrics: {
         data: "6M+",
@@ -159,14 +159,14 @@ export const userData = {
     {
       id: "harvard-school",
       name: "Harvard School Akute Website",
-      description: "Mobile and Web-responsive website for Nigerian school with SEO integration",
-      fullDescription: "My mother's school in Nigeria needed an online presence to improve visibility and admissions. I developed a mobile-responsive website using HTML, CSS, JS, and PHP, integrating SEO and basic analytics. Within a term, enrollment increased by 13%, and the school earned WAEC and NECO certifications.",
+      description: "Mobile-responsive website for a Nigerian school with full SEO integration",
+      fullDescription: "My mother's school in Nigeria lacked an online presence, limiting visibility and admissions. I built a fully mobile-responsive website using HTML, CSS, JavaScript, and PHP — integrating SEO best practices and basic analytics from day one. Within a single term, enrollment grew by 13% and the school earned both WAEC and NECO certifications.",
       techStack: ["HTML", "CSS", "JavaScript", "PHP", "SEO", "Google Analytics"],
       highlights: [
-        "Mobile-responsive design",
-        "SEO optimization",
-        "13% enrollment increase",
-        "WAEC and NECO certifications"
+        "Fully mobile-responsive design",
+        "SEO-optimized for discoverability",
+        "13% enrollment increase within one term",
+        "WAEC and NECO certified"
       ],
       metrics: {
         enrollment: "+13%",
@@ -182,14 +182,14 @@ export const userData = {
     {
       id: "faculty-research",
       name: "Student-Faculty Research Portal",
-      description: "Mock Flask-based web portal for research collaboration at WSU",
-      fullDescription: "Built as a mock class project at WSU, this portal showcased our first hands-on application of software engineering principles, from Agile methodology to version control and comprehensive documentation. I developed a secure Flask-based web app that allowed students to discover and apply to research projects while giving faculty a dashboard to manage applications. Designed to simulate real-world workflow, it successfully demonstrated how to turn an idea into a functional, scalable solution during pilot testing with over 100 users.",
-      techStack: ["Flask", "Python", "SQLite", "Authentication", "Dashboard", "Web Development", "agile development", "Test driven devlopment", "Technical Documentation"],
+      description: "Flask-based web portal for research collaboration at WSU",
+      fullDescription: "Built as a capstone-style class project at WSU, this portal applied real-world software engineering principles — from Agile methodology to version control and end-to-end documentation. I developed a secure Flask web application allowing students to discover and apply to research opportunities while giving faculty a dashboard to manage the full application lifecycle. Piloted with 100+ simulated users, it demonstrated how disciplined engineering turns a concept into a scalable, production-ready system.",
+      techStack: ["Flask", "Python", "SQLite", "Authentication", "Dashboard", "Web Development", "Agile Development", "Test-Driven Development", "Technical Documentation"],
       highlights: [
-        "Agile-based workflow",
-        "Version controlled code",
-        "secure authentication",
-        "Test driven devlopment"
+        "Agile-driven development workflow",
+        "Version-controlled from day one",
+        "Secure multi-role authentication",
+        "Test-driven development throughout"
       ],
       metrics: {
         test_coverage: "98%",
@@ -205,13 +205,13 @@ export const userData = {
     {
       id: "python-100-days",
       name: "100 Days of Code — Python Projects",
-      description: "Daily Python challenge: 30+ projects from beginner to intermediate level",
-      fullDescription: "This self-paced challenge, inspired by Angela Yu's Udemy course, guided me through building over 30 Python mini-projects across topics like data handling, OOP, automation, and game design. I learned how to turn basic concepts like loops, conditionals, and dictionaries into fun and interactive programs—ranging from text-based games to GUI apps using Tkinter. The experience solidified my Python fundamentals and helped me build a habit of daily coding and iterative debugging.",
-      techStack: ["Python", "OOP", "Tkinter", "Turtle Graphics", "File I/O", "pandas", "GUI Apps", "APIs", "smtplib", "Random library"],
+      description: "Daily Python challenge: 30+ projects spanning beginner to intermediate level",
+      fullDescription: "Inspired by Angela Yu's Udemy course, this self-paced challenge drove me through 30+ Python mini-projects spanning data handling, OOP, automation, and game design. From text-based games to GUI apps built with Tkinter, each project turned core concepts — loops, conditionals, dictionaries — into fully interactive programs. The experience cemented my Python fundamentals and instilled a discipline of daily iteration, debugging, and shipping.",
+      techStack: ["Python", "OOP", "Tkinter", "Turtle Graphics", "File I/O", "Pandas", "GUI Apps", "APIs", "smtplib", "Random Library"],
       highlights: [
-        "Daily code challenges completed",
-        "OOP and Functional programming projects", 
-        "GUI applications with Tkinter",
+        "Consistent daily code challenges",
+        "OOP and functional programming projects",
+        "GUI applications built with Tkinter",
         "Game development and automation scripts"
       ],
       metrics: {
@@ -231,22 +231,22 @@ export const userData = {
     {
       id: "nsbe-leadership",
       name: "NSBE Leadership",
-      description: "National Society of Black Engineers - Multiple Leadership Positions",
-      fullDescription: "Progressive leadership roles within NSBE, from Director of National Communications to Secretary to Co-Director of Conferences. Led event planning, team coordination, and organizational communication initiatives.",
+      description: "National Society of Black Engineers — Multiple progressive leadership roles",
+      fullDescription: "Held progressive leadership positions within NSBE over three years — advancing from Director of National Communications to Secretary to Co-Director of Conferences. Led event planning, team coordination, and organizational communication at a national level, including reviving WSU's national chapter presence after a four-year hiatus.",
       role: "Communications Director | Secretary | Conferences Co-Director",
       period: "2022-2025",
       company: "National Society of Black Engineers (NSBE)",
       tags: ["Leadership", "Event Planning", "Project Management", "Communication", "Team Coordination"],
       highlights: [
-        "Revived WSU's National Presence after 4yr hiatus",
+        "Revived WSU's national presence after a 4-year hiatus",
         "Led technical workshops on conference readiness",
-        "Large-scale event coordination"
+        "Coordinated large-scale national events"
       ],
       achievements: [
-        "Led national communication initiatives",
-        "Managed organizational documentation",
-        "Coordinated major conferences and events",
-        "Advanced leadership skills development"
+        "Drove national communication initiatives across chapters",
+        "Managed organizational documentation at scale",
+        "Directed major conferences and flagship events",
+        "Accelerated personal and team leadership development"
       ],
       type: "leadership",
       gridSize: "large",
@@ -255,22 +255,22 @@ export const userData = {
     {
       id: "cougar-card-center",
       name: "Cougar Card Center",
-      description: "Campus student services and support operations",
-      fullDescription: "Worked at Washington State University's Cougar Card Center, providing student services, managing card operations, and developing customer service and administrative skills.",
+      description: "Campus student services and card operations at Washington State University",
+      fullDescription: "Served at Washington State University's Cougar Card Center, delivering front-line student services, managing card operations, and honing customer service and administrative skills in a high-traffic campus environment.",
       role: "Clerical Assistant I",
       period: "2022 - 2023",
       company: "Washington State University",
       tags: ["Customer Service", "Student Services", "Communication"],
       highlights: [
-        "Student ID card management",
-        "Customer service excellence",
-        "Campus operations experience"
+        "Student ID card issuance and management",
+        "Consistent customer service excellence",
+        "Day-to-day campus operations experience"
       ],
       achievements: [
-        "Enhanced customer service skills",
-        "Streamlined card processing operations",
-        "Improved student experience",
-        "Developed administrative expertise"
+        "Strengthened customer-facing communication skills",
+        "Streamlined card processing workflows",
+        "Improved the student service experience",
+        "Built a foundation in administrative operations"
       ],
       type: "work",
       gridSize: "medium",
@@ -279,22 +279,22 @@ export const userData = {
     {
       id: "sel-internship",
       name: "SEL Internship",
-      description: "Software Quality Assurance and Testing at Schweitzer Engineering Laboratories",
-      fullDescription: "Interned at SEL focusing on software quality assurance processes, test script development, and failure data analysis. Gained hands-on experience with enterprise-level testing methodologies and quality control systems.",
+      description: "Software quality assurance and test engineering at Schweitzer Engineering Laboratories",
+      fullDescription: "Interned at SEL working on software quality assurance, test script development, and failure data analysis. Gained hands-on exposure to enterprise-level testing methodologies, quality control systems, and the discipline required to ship software that protects critical infrastructure.",
       role: "Test Engineer (Software) Intern",
       period: "2023",
       company: "Schweitzer Engineering Laboratories (SEL)",
       tags: ["Testing Frameworks", "Quality Assurance", "Test Scripts", "Data Analysis", "Bug Tracking"],
       highlights: [
-        "Developed comprehensive test scripts",
-        "Analyzed software failure data",
-        "Supported QA processes and procedures",
-        "Enterprise-level testing experience"
+        "Authored comprehensive test scripts",
+        "Analyzed software failure data for root causes",
+        "Supported QA processes and documentation",
+        "Gained enterprise-level testing experience"
       ],
       achievements: [
-        "Improved test coverage efficiency",
-        "Identified critical system vulnerabilities", 
-        "Streamlined QA documentation process"
+        "Improved test coverage efficiency across modules",
+        "Identified critical system vulnerabilities before release",
+        "Streamlined QA documentation and reporting processes"
       ],
       type: "internship",
       gridSize: "large",
@@ -303,22 +303,22 @@ export const userData = {
     {
       id: "plum",
       name: "Plum AI",
-      description: "AI calendar scheduling service",
-      fullDescription: "Contributed to the development of an intelligent calendar scheduling agent that parses data from your Google and Apple calendars and suggest best times for you.",
+      description: "AI-powered calendar scheduling agent",
+      fullDescription: "Contributed to building an intelligent scheduling agent that parses data from Google and Apple calendars to surface the best available meeting times. Worked across the stack to deliver a responsive, AI-driven experience that removes the friction from everyday scheduling decisions.",
       role: "Software Engineer",
       period: "Feb 2025 - May 2025",
       company: "Pangeon.com",
       tags: ["React", "TypeScript", "Node.js", "TensorFlow", "MongoDB", "AWS"],
       highlights: [
-        "AI-powered financial advice",
-        "Automated expense categorization",
-        "Investment portfolio optimization",
-        "Real-time spending alerts"
+        "AI-driven calendar parsing and scheduling",
+        "Google and Apple Calendar integrations",
+        "Intelligent time-slot recommendation engine",
+        "Full-stack feature development"
       ],
       achievements: [
-        "Developed AI recommendation engine",
-        "Implemented secure authentication",
-        "Optimized data processing pipelines"
+        "Developed the AI scheduling recommendation engine",
+        "Implemented secure multi-platform authentication",
+        "Optimized data processing pipelines for speed"
       ],
       type: "professional",
       gridSize: "medium",
@@ -327,23 +327,23 @@ export const userData = {
     {
       id: "jeroyaf",
       name: "Jeroyaf Accounting & Tax Services",
-      description: "Accounting automation and internal tooling project",
-      fullDescription: "Worked on a suite of internal tools to automate bookkeeping, streamline tax prep, and improve client onboarding. Contributed to building secure software systems integrated with third-party APIs (QuickBooks, ProSeries), and supported sensitive financial workflows with a focus on accuracy, compliance, and performance optimization.",
+      description: "Internal automation and tooling for accounting and tax workflows",
+      fullDescription: "Built a suite of internal tools to automate bookkeeping, streamline tax preparation, and improve client onboarding. Integrated with third-party platforms (QuickBooks, ProSeries) to deliver secure, accurate financial workflows — with a focus on compliance, performance optimization, and scaling through tax season without breaking a sweat.",
       role: "Software Engineer",
       period: "Jun 2025 - Present",
       company: "Jeroyaf Accounting and Tax Services",
       tags: ["Python", "Flask", "SQL", "QuickBooks API", "ProSeries", "Automation"],
       highlights: [
-        "Bookkeeping automation",
-    "Internal tools development",
-    "Secure financial workflows",
-    "Third-party API integrations"
+        "Bookkeeping automation at scale",
+        "Internal tooling development",
+        "Secure and compliant financial workflows",
+        "Third-party API integrations (QuickBooks, ProSeries)"
       ],
       achievements: [
-        "Automated repetitive accounting tasks",
-    "Integrated QuickBooks and ProSeries APIs",
-    "Improved internal workflow accuracy",
-    "Supported tax season scalability"
+        "Automated high-volume, repetitive accounting tasks",
+        "Integrated QuickBooks and ProSeries APIs seamlessly",
+        "Improved internal workflow accuracy and traceability",
+        "Delivered tax-season scalability on a tight timeline"
       ],
       type: "professional",
       gridSize: "medium",
@@ -386,22 +386,22 @@ export const userData = {
       title: "Senior Full-Stack Engineer",
       company: "Tech Innovation Labs",
       period: "2022 - Present",
-      description: "Leading development of AI-powered applications and distributed systems architecture.",
+      description: "Leading the development of AI-powered applications and distributed systems architecture.",
       achievements: [
         "Built scalable microservices handling 1M+ daily requests",
         "Implemented ML models improving user engagement by 40%",
-        "Mentored junior developers and established coding standards"
+        "Mentored junior engineers and established team coding standards"
       ]
     },
     {
       title: "Software Engineer",
       company: "Digital Solutions Inc",
       period: "2020 - 2022", 
-      description: "Developed full-stack applications with focus on user experience and performance optimization.",
+      description: "Developed full-stack applications with a focus on user experience and performance optimization.",
       achievements: [
-        "Reduced application load time by 60% through optimization",
+        "Reduced application load time by 60% through targeted optimization",
         "Built responsive web applications serving 100K+ users",
-        "Collaborated with design teams to implement pixel-perfect UIs"
+        "Collaborated with design teams to deliver pixel-perfect interfaces"
       ]
     }
   ],
