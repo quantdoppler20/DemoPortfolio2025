@@ -116,11 +116,11 @@ const BentoGrid = ({ userData }) => {
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-green-400 to-cyan-400">
-              Personal Projects
+              Deployed Systems
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Navigate through my constellation of personal projects — each one a unique world of innovation and code
+            Mission-critical systems architected, engineered, and operated at enterprise scale — zero handoffs, zero compromise
           </p>
 
           {/* Terminal-style decoration */}
@@ -184,7 +184,7 @@ const BentoGrid = ({ userData }) => {
             className="mt-8 flex justify-center"
           >
             <motion.a
-              href="https://github.com/Ehiane?tab=repositories"
+              href="https://github.com/quantdoppler20"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-green-500/20 border border-cyan-400/30 rounded-lg font-mono text-cyan-400 hover:text-white transition-all duration-300 hover:border-cyan-400/60 hover:shadow-lg hover:shadow-cyan-400/20"

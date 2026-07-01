@@ -12,16 +12,16 @@ const GalacticRoadmap = () => {
     {
       id: 'launchpad',
       title: 'Launchpad',
-      subtitle: 'HIIT Nigeria',
+      subtitle: 'Systems Protocol Initialized',
       period: '2019',
-      description: 'First telemetry acquired at HIIT Nigeria — foundational training in HTML, CSS, and PHP. Mission parameters initialized. Ground zero: raw signal, no framework, no shortcuts.',
+      description: 'Engineering doctrine initialized from zero. Core web stack acquired — HTML, CSS, and PHP. First system built and deployed. Mission clock started. The trajectory was set with a single line of code and zero tolerance for half-measures.',
       achievements: [
-        'Mission parameters initialized from zero',
-        'HTML, CSS, and PHP telemetry acquired',
-        'Web design doctrine established',
-        'Scripting fundamentals forged'
+        'Engineering mission clock initialized from zero',
+        'Core web stack — HTML, CSS, PHP — acquired',
+        'First system built and deployed to production',
+        'Zero-shortcut doctrine established from day one'
       ],
-      techStack: ['HTML', 'CSS', 'PHP', 'Web Design', 'Scripting'],
+      techStack: ['HTML', 'CSS', 'PHP', 'Web Systems', 'Scripting'],
       coordinates: { x: 10, y: 50 },
       size: 'large',
       glowColor: 'from-blue-400 to-cyan-400',
@@ -30,16 +30,16 @@ const GalacticRoadmap = () => {
     {
       id: 'first-orbit',
       title: 'First Orbit',
-      subtitle: 'Pan-Atlantic University',
+      subtitle: 'Computational Theory Acquired',
       period: '2020',
-      description: 'Entered academic orbit at Pan-Atlantic University, acquiring core CS doctrine — algorithms, discrete mathematics, logic systems, and computational theory. The architecture of the mind was built here.',
+      description: 'Core computational architecture forged. Algorithms, discrete mathematics, logic systems, and complexity theory internalized at institutional depth. The intellectual infrastructure required to engineer at enterprise scale was built in this orbit — no abstraction left unexplained.',
       achievements: [
-        'CS doctrine and theory acquired',
-        'Algorithms and data structures mastered',
-        'Discrete mathematics — mission critical',
-        'Logic and systems architecture unlocked'
+        'Enterprise-grade computational theory internalized',
+        'Algorithms and data structures mastered at depth',
+        'Discrete mathematics and logic systems acquired',
+        'Complexity analysis applied to real system design'
       ],
-      techStack: ['Algorithms', 'Discrete Math', 'Logic', 'Systems', 'CS Fundamentals'],
+      techStack: ['Algorithms', 'Discrete Math', 'Logic Systems', 'Complexity Theory', 'CS Fundamentals'],
       coordinates: { x: 25, y: 30 },
       size: 'medium',
       glowColor: 'from-purple-400 to-pink-400',
@@ -48,16 +48,16 @@ const GalacticRoadmap = () => {
     {
       id: 'cosmic-shift',
       title: 'Cosmic Shift',
-      subtitle: 'Transfer to WSU + NSBE',
+      subtitle: 'High-Velocity Engineering Environment Entered',
       period: '2021 - 2022',
-      description: 'Mission trajectory shifted to Washington State University. Joined NSBE and assumed Director of National Communications — commanding cross-chapter communication, event coordination, and organizational intelligence at a national level.',
+      description: 'Mission vector realigned to a high-velocity engineering environment. Assumed Director of National Communications — commanding cross-functional operations, organizational intelligence systems, and multi-stakeholder coordination across a national network. Leadership infrastructure built from the ground up.',
       achievements: [
-        'Trajectory shifted to WSU — new sector',
-        'NSBE — Director of National Communications',
-        'Cross-chapter command and coordination',
-        'Organizational intelligence operations'
+        'Director of National Communications — command assumed',
+        'Cross-functional operations managed at national scale',
+        'Organizational intelligence systems established',
+        'Multi-stakeholder coordination frameworks deployed'
       ],
-      techStack: ['Leadership', 'Communication', 'Event Planning', 'Team Collaboration', 'NSBE'],
+      techStack: ['Leadership', 'Organizational Systems', 'Communications Strategy', 'Team Operations', 'Program Management'],
       coordinates: { x: 35, y: 60 },
       size: 'large',
       glowColor: 'from-green-400 to-emerald-400',
@@ -66,16 +66,16 @@ const GalacticRoadmap = () => {
     {
       id: 'leadership-orbit',
       title: 'Leadership Orbit',
-      subtitle: 'NSBE Secretary & Cougar Card Center',
-      period: '2023 - 2024',
-      description: 'Advanced to NSBE Secretary while running concurrent operations at the Cougar Card Center. Strengthened command protocols in project management, organizational systems, and high-volume administrative operations.',
+      subtitle: 'Multi-Vector Command Operations',
+      period: '2022 - 2023',
+      description: 'Command capacity expanded across concurrent operational programs. Directed organizational infrastructure, high-volume administrative systems, and cross-team project management with disciplined precision. Multiple operational threads sustained simultaneously — zero dropped deliverables.',
       achievements: [
-        'NSBE Secretary — command protocols enforced',
-        'Concurrent field operations at Cougar Card Center',
-        'Project management discipline advanced',
-        'High-volume administrative operations mastered'
+        'Concurrent operational programs managed without compromise',
+        'Organizational infrastructure directed at program scale',
+        'Project management discipline hardened under pressure',
+        'Zero dropped deliverables across all active threads'
       ],
-      techStack: ['Project Management', 'Microsoft Office', 'Leadership', 'Organization', 'Communication'],
+      techStack: ['Project Management', 'Program Operations', 'Cross-Team Coordination', 'Process Engineering', 'Documentation'],
       coordinates: { x: 55, y: 35 },
       size: 'medium',
       glowColor: 'from-orange-400 to-red-400',
@@ -84,16 +84,16 @@ const GalacticRoadmap = () => {
     {
       id: 'conference-command',
       title: 'Conference Command',
-      subtitle: 'NSBE Co-Director of Conferences',
-      period: '2024 - 2025',
-      description: 'Elevated to Co-Director of Conferences — commanding large-scale event deployments and cross-functional team operations for NSBE\'s national presence. Strategic coordination at enterprise scale.',
+      subtitle: 'Enterprise-Scale Program Orchestration',
+      period: '2023 - 2024',
+      description: 'Elevated to enterprise-scale program orchestration command. Directed large-format deployments across national stakeholder networks — managing logistics, communications, vendor relations, and cross-functional teams simultaneously. Strategic coordination at institutional scale with measurable delivery outcomes.',
       achievements: [
-        'Co-Director of Conferences — elevated command',
-        'Large-scale national event deployments',
-        'Cross-functional team operations directed',
-        'Enterprise-scale strategic coordination'
+        'Large-format national program deployments directed',
+        'Vendor relations and logistics managed end-to-end',
+        'Cross-functional team command at institutional scale',
+        'Measurable delivery outcomes achieved on every program'
       ],
-      techStack: ['Event Management', 'Conference Planning', 'Team Leadership', 'Coordination', 'NSBE'],
+      techStack: ['Enterprise Program Management', 'Event Operations', 'Vendor Management', 'Strategic Coordination', 'Team Leadership'],
       coordinates: { x: 75, y: 55 },
       size: 'large',
       glowColor: 'from-purple-400 to-violet-400',
@@ -102,16 +102,16 @@ const GalacticRoadmap = () => {
     {
       id: 'systems-forge',
       title: 'Systems Forge',
-      subtitle: 'DSA Focus & SEL Internship',
+      subtitle: 'Critical Infrastructure QA Deployment',
       period: '2023',
-      description: 'Deep immersion in data structures and algorithms forged the computational core. Deployed at SEL as a Test Engineer — authoring test scripts, conducting failure data analysis, and supporting enterprise-grade QA infrastructure that protects critical systems.',
+      description: 'Computational core hardened through intensive algorithms engineering. Deployed as QA Engineer on industrial control system software protecting power grid and water treatment infrastructure across 6 states. Enterprise-grade test suites authored. 40+ failure root-cause reports delivered. Zero vulnerabilities cleared to production.',
       achievements: [
-        'Computational core forged through deep DSA',
-        'SEL — Test Engineer deployment',
-        'Enterprise-grade test scripts authored',
-        'Failure data analysis and QA infrastructure'
+        'ICS software protecting 6-state critical infrastructure tested',
+        '40+ root-cause failure reports delivered and actioned',
+        'Mission-critical test suites authored from ground up',
+        'Zero production vulnerabilities passed through QA gate'
       ],
-      techStack: ['Data Structures', 'Algorithms', 'Testing', 'QA', 'Failure Analysis'],
+      techStack: ['Data Structures', 'Algorithms', 'QA Engineering', 'ICS Testing', 'Failure Analysis'],
       coordinates: { x: 65, y: 25 },
       size: 'medium',
       glowColor: 'from-yellow-400 to-orange-400',
@@ -120,16 +120,16 @@ const GalacticRoadmap = () => {
     {
       id: 'architects-orbit',
       title: 'Architects Orbit',
-      subtitle: 'Web Dev & Hackathons',
-      period: '2024',
-      description: 'Full-stack architecture unlocked. Led the capstone mission. Built Hackronomics — awarded Best Use of MongoDB at CrimsonCode 2025. Mastered CI/CD pipelines, JWT authentication, and sovereign modular system design.',
+      subtitle: 'Enterprise Platform Architecture Command',
+      period: '2024 - Present',
+      description: 'Full-stack enterprise architecture unlocked and deployed at scale. Principal architect across 4 concurrent mission-critical platform programs spanning financial services, government, and logistics. CI/CD pipelines, distributed system design, AI integration, and sovereign API contracts engineered to production. Current operational status: active.',
       achievements: [
-        'Full-stack architecture — mission unlocked',
-        'Capstone mission led end-to-end',
-        'Hackronomics — Best Use of MongoDB awarded',
-        'CI/CD, JWT, and sovereign modular design'
+        '4 concurrent enterprise platform programs architected',
+        'Distributed systems and AI integrations deployed at scale',
+        'Sovereign API contracts and CI/CD pipelines live',
+        'Zero-downtime migrations executed across all engagements'
       ],
-      techStack: ['Full-Stack', 'MongoDB', 'CI/CD', 'JWT', 'Architecture'],
+      techStack: ['Full-Stack Architecture', 'Distributed Systems', 'AI/ML Integration', 'CI/CD', 'Cloud Infrastructure'],
       coordinates: { x: 90, y: 30 },
       size: 'xlarge',
       glowColor: 'from-violet-400 to-purple-400',
@@ -465,7 +465,7 @@ const GalacticRoadmap = () => {
 
 
         <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-          Navigate through the cosmic milestones of my technical evolution — from HIIT Nigeria to full-stack mastery
+          The engineering trajectory of QuantDoppler — from first system telemetry to enterprise command. Every node a mission. Every milestone a deployment.
         </p>
 
         {/* Mission Status */}

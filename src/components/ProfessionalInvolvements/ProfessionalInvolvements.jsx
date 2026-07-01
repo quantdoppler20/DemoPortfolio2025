@@ -62,11 +62,11 @@ const ProfessionalInvolvements = ({ userData }) => {
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-orange-400">
-              Work Experience
+              Enterprise Engagements
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Professional experiences and leadership roles that shaped my engineering journey
+            Sovereign-grade operational deployments across critical industries — zero handoffs, full-stack ownership, zero compromise
           </p>
         </motion.div>
 
