@@ -97,7 +97,7 @@ const HeroSection = ({ userData }) => {
       ],
       '/contact': [
         'Secure Uplink Channels:',
-        '• GitHub: https://github.com/ehiane',
+        '• GitHub: https://github.com/quantdoppler20',
         '• Email: Mission-critical inquiries only',
         '',
         'Response window: < 24 hours. Zero handoffs. 📡'
@@ -429,7 +429,7 @@ const HeroSection = ({ userData }) => {
                       className="flex space-x-4 mt-6 pt-4 border-t border-green-500/30"
                     >
                       <motion.a
-                        href={userData?.personal?.github || "https://github.com/ehiane"}
+                        href={userData?.personal?.github || "https://github.com/quantdoppler20"}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center space-x-2 px-4 py-2 bg-gray-800/50 hover:bg-gray-700/70 border border-gray-600/50 hover:border-green-400/50 rounded-lg transition-all duration-300 group"
@@ -491,22 +491,24 @@ const HeroSection = ({ userData }) => {
                   </div>
                 </div>
 
-                {/* Astronaut Portrait */}
+                {/* QD Logo */}
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ duration: 0.8, delay: 0.3 }}
                   className="flex justify-center mb-6"
                 >
-                  <div className="relative w-24 h-24 rounded-full overflow-hidden border-2 border-cyan-400 shadow-lg shadow-cyan-400/30">
+                  <div className="relative w-28 h-28 rounded-full overflow-hidden border-2 border-cyan-400 shadow-lg shadow-cyan-400/40"
+                    style={{ background: '#1a6fb5' }}
+                  >
                     <img
-                      src="/assets/astronaut-portrait.jpg"
-                      alt="QuantDoppler - Space Explorer"
+                      src="/assets/qd-logo.jpg"
+                      alt="QuantDoppler"
                       className="w-full h-full object-cover"
+                      style={{ objectPosition: 'center 42%', transform: 'scale(1.18)' }}
                       onError={(e) => {
-                        // Fallback to a gradient background if image fails to load
                         e.target.style.display = 'none'
-                        e.target.parentElement.style.background = 'linear-gradient(135deg, #64ffda 0%, #16213e 100%)'
+                        e.target.parentElement.style.background = 'linear-gradient(135deg, #1a6fb5 0%, #0f3460 100%)'
                       }}
                     />
                     {/* Status indicator */}
@@ -515,15 +517,22 @@ const HeroSection = ({ userData }) => {
                     </div>
                   </div>
                 </motion.div>
-                
-                <h1 className="text-4xl md:text-5xl font-bold mb-2 text-center">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400">
-                    {userData?.personal?.name || 'QuantDoppler'}
-                  </span>
-                </h1>
 
-                <p className="text-sm text-gray-300 mb-4 text-center font-mono tracking-wide leading-relaxed">
-                  {userData?.personal?.subtitle || 'Sovereign Systems Engineering. Deep-Tech at Scale.'}
+                {/* Hero Headline */}
+                <div className="text-center mb-3">
+                  <p className="text-cyan-400/70 font-mono text-xs tracking-[0.25em] uppercase mb-1">Hi, We Are</p>
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400">
+                      QuantDoppler
+                    </span>
+                  </h1>
+                  <p className="text-white/80 font-semibold text-sm mt-2 leading-snug">
+                    Full-Stack Engineering Bureau
+                  </p>
+                </div>
+
+                <p className="text-xs text-gray-400 mb-4 text-center font-mono tracking-wide leading-relaxed">
+                  AI-Driven Architecture · Enterprise Systems · Zero Handoffs
                 </p>
 
                 {/* Stats Grid */}

@@ -11,7 +11,7 @@ const navLinks = [
 ]
 
 const socials = [
-  { label: 'GitHub', href: 'https://github.com/ehiane' },
+  { label: 'GitHub', href: 'https://github.com/quantdoppler20' },
 ]
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="fixed top-16 left-0 w-full z-40 flex items-center justify-between px-6 py-4 pointer-events-none">
+      <div className="fixed top-4 left-0 w-full z-40 flex items-center justify-between px-6 py-4 pointer-events-none">
 
         <button
           onClick={() => setIsOpen(true)}

@@ -49,13 +49,16 @@ const NameReveal = ({ onComplete }) => {
         >
           {/* Main Name */}
           <motion.h1
-            className="text-8xl md:text-9xl font-bold tracking-wider"
+            className="font-bold tracking-tight text-center w-full px-4 leading-none"
             style={{
+              fontSize: 'clamp(2.2rem, 9.5vw, 7.5rem)',
               background: 'linear-gradient(45deg, #64ffda, #ffffff, #64ffda)',
               backgroundSize: '200% 200%',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               color: 'transparent',
+              wordBreak: 'break-word',
+              overflowWrap: 'break-word',
             }}
             animate={{
               backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],

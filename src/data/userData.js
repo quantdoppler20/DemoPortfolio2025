@@ -5,7 +5,7 @@ export const userData = {
     description: "A deep-tech engineering bureau forging enterprise-grade systems for industries that cannot fail. From first telemetry to live mission deployment — a single trajectory, full-stack ownership, zero handoffs, zero compromise.",
     location: "Available Worldwide",
     email: "ehiane@example.com",
-    github: "https://github.com/ehiane",
+    github: "https://github.com/quantdoppler20",
   },
 
   terminalSequence: [
